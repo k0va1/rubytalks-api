@@ -9,7 +9,17 @@ module Repositories
     def all(limit: nil, offset: nil)
       return talks.to_a if limit.nil? && offset.nil?
 
-      apply_pagination(talks).one!
+      apply_pagination(talks, offset, limit).one!
+    end
+
+    def all_approved(limit: nil, offset: nil)
+      combined = talks
+                 .combine(:speakers, :event)
+                 .with_state('approved')
+
+      return combined.to_a if limit.nil? && offset.nil?
+
+      apply_pagination(combined, offset, limit).one!
     end
 
     def all_ordered_by_created_at

@@ -1,0 +1,7 @@
+{
+  "id": "file:/user_api/speakers.json",
+  "type": "array",
+  "items": {
+    "$ref": "file:/user_api/speaker.json#"
+  }
+}

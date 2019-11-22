@@ -1,0 +1,22 @@
+{
+  "id": "file:/user_api/speaker.json",
+  "type": "object",
+  "required": [
+    "id",
+    "first_name",
+    "last_name",
+    "slug",
+    "state",
+    "updated_at",
+    "created_at"
+  ],
+  "properties": {
+    "id": { "type": "number" },
+    "first_name": { "type": "string" },
+    "last_name": { "type": "string" },
+    "slug": { "type": "string" },
+    "state": { "type": "string" },
+    "updated_at": { "type": "string" },
+    "created_at": { "type": "string" }
+  }
+}

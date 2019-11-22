@@ -1,0 +1,7 @@
+{
+  "id": "file:/user_api/talks.json",
+  "type": "array",
+  "items": {
+    "$ref": "file:/user_api/talk.json#"
+  }
+}

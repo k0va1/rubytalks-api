@@ -21,14 +21,5 @@ RSpec.describe Domains::Talks::Operations::Create do
     let(:operation) { described_class.new(oembed: oembed) }
 
     it { expect(subject).to be_success }
-
-    it 'creates all the entities' do
-      expect { subject }.to change {
-        Repositories::Talk.new.all.count
-        Repositories::Event.new.all.count
-        Repositories::Speaker.new.all.count
-        Repositories::TalksSpeaker.new.all.count
-      }.by(1)
-    end
   end
 end

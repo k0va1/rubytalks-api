@@ -1,0 +1,36 @@
+---
+kind: pipeline
+type: docker
+name: rubytalks
+
+steps:
+  - name: rubocop
+    image: ruby:2.6.3
+    commands:
+      - gem install bundler:2.0.2
+      - bundle -v
+      - bundle install
+      - bundle exec rubocop
+
+  - name: rspec
+    image: ruby:2.6.3
+    commands:
+      - bundle -v
+      - bundle install
+      - HANAMI_EVN=test bundle exec rspec
+
+  - name: notify
+    image: appleboy/drone-telegram
+    settings:
+      token:
+        from_secret: TG_TOKEN
+      to:
+        from_secret: TG_USER_ID
+      socks5:
+        from_secret: SOCKS5
+
+trigger:
+  branches:
+    - master
+  event:
+    - push
