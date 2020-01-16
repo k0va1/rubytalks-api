@@ -7,17 +7,16 @@ steps:
   - name: rubocop
     image: ruby:2.6.3
     commands:
-      - gem install bundler:2.0.2
-      - bundle -v
+      - gem install bundler
       - bundle install
       - bundle exec rubocop
 
   - name: rspec
     image: ruby:2.6.3
     commands:
-      - bundle -v
+      - gem install bundler
       - bundle install
-      - HANAMI_EVN=test bundle exec rspec
+      - bundle exec rspec
 
   - name: notify
     image: appleboy/drone-telegram
@@ -28,9 +27,15 @@ steps:
         from_secret: TG_USER_ID
       socks5:
         from_secret: SOCKS5
+    when:
+      status:
+        - success
+        - failure
 
-trigger:
-  branches:
-    - master
-  event:
-    - push
+#services:
+#  - name: pg
+#    image: postgres
+#    environment:
+#      - POSTGRES_USER=postgres
+#      - POSTGRES_PASSWORD=postgres
+#      - POSTGRES_DB=rubytalks-test
