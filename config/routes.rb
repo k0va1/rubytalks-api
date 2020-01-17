@@ -2,8 +2,6 @@
 
 Hanami.application.routes do
   mount :admin_api, at: '/admin' do
-    root to: 'home#index'
-
     resources :talks, only: [:update] do
       collection do
         get :unpublished
@@ -17,5 +15,11 @@ Hanami.application.routes do
 
     resources :speakers, only: [:update]
     resources :events, only: [:update]
+  end
+
+  mount :user_api, at: '/' do
+    resources :talks, only: %i[show create index] # only symbols allowed; no error with strings
+    resources :speakers, only: %i[show index]
+    resources :events, only: %i[show index]
   end
 end

@@ -1,5 +1,5 @@
 # Rubytalks
-[![CircleCI](https://circleci.com/gh/saintprug/rubytalks.org/tree/master.svg?style=svg)](https://circleci.com/gh/saintprug/rubytalks.org/tree/master)
+[![Build Status](https://drone.fuckrf.cf/api/badges/k0va1/rubytalks.org/status.svg)](https://drone.fuckrf.cf/k0va1/rubytalks.org)
 
 All Ruby talks in one place.
 

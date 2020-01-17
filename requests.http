@@ -1,0 +1,62 @@
+##### User API #####
+
+# Talks
+GET http://localhost:2300/talks
+
+###
+
+GET http://localhost:2300/talks/1
+
+###
+
+POST http://localhost:2300/talks
+Content-Type: application/json
+
+{
+  "title": "Opening Keynote",
+  "description": "Opening Keynote from Matz",
+  "link": "https://www.youtube.com/watch?v=1XdTr84f-vA&t",
+  "talked_at": "2020-01-16T13:05:33+00:00",
+  "speakers": [
+    {
+      "first_name": "Alex",
+      "last_name": "Koval"
+    }
+  ]
+}
+
+###
+
+# Speakers
+GET http://localhost:2300/speakers
+
+###
+
+GET http://localhost:2300/speakers/1
+
+###
+
+# Events
+GET http://localhost:2300/events
+
+###
+
+GET http://localhost:2300/events/1
+
+###
+
+
+##### Admin API #####
+
+# Talks
+GET http://localhost:2300/admin/talks/unpublished
+
+###
+
+POST http://localhost:2300/admin/talks/3/approve
+
+###
+
+POST http://localhost:2300/admin/talks/3/decline
+
+###

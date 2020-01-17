@@ -1,0 +1,41 @@
+---
+kind: pipeline
+type: docker
+name: rubytalks
+
+steps:
+  - name: rubocop
+    image: ruby:2.6.3
+    commands:
+      - gem install bundler
+      - bundle install
+      - bundle exec rubocop
+
+  - name: rspec
+    image: ruby:2.6.3
+    commands:
+      - gem install bundler
+      - bundle install
+      - bundle exec rspec
+
+  - name: notify
+    image: appleboy/drone-telegram
+    settings:
+      token:
+        from_secret: TG_TOKEN
+      to:
+        from_secret: TG_USER_ID
+      socks5:
+        from_secret: SOCKS5
+    when:
+      status:
+        - success
+        - failure
+
+#services:
+#  - name: pg
+#    image: postgres
+#    environment:
+#      - POSTGRES_USER=postgres
+#      - POSTGRES_PASSWORD=postgres
+#      - POSTGRES_DB=rubytalks-test

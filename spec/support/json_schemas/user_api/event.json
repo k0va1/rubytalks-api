@@ -1,0 +1,24 @@
+{
+  "id": "file:/user_api/event.json",
+  "type": "object",
+  "required": [
+    "id",
+    "name",
+    "city",
+    "state",
+    "started_at",
+    "ended_at",
+    "updated_at",
+    "created_at"
+  ],
+  "properties": {
+    "id": { "type": "number" },
+    "name": { "type": "string" },
+    "city": { "type": "string" },
+    "state": { "type": "string" },
+    "started_at": { "type": "string" },
+    "ended_at": { "type": "string" },
+    "updated_at": { "type": "string" },
+    "created_at": { "type": "string" }
+  }
+}
