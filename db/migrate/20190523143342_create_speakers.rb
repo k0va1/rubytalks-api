@@ -9,6 +9,7 @@ ROM::SQL.migration do
 
       column :first_name, String, null: false
       column :last_name, String, null: false
+      column :middle_name, String
       column :slug, String, null: false
       column :state, :state, null: false, default: 'unpublished'
 
