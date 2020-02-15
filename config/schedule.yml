@@ -1,0 +1,4 @@
+confreaks_import:
+  cron: "0 0 * * 0" # At 00:00 on Sunday
+  class: "Domains::Talks::Workers::ConfreaksImport"
+  queue: default
