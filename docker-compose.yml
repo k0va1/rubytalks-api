@@ -37,6 +37,7 @@ services:
 
   runner:
     <<: *web
+    container_name: runner
     command: /bin/bash
     ports:
       - '2300:2300'
@@ -44,15 +45,18 @@ services:
 
   hanami:
     <<: *web
+    container_name: hanami
     command: bundle exec hanami s --host=0.0.0.0
     ports:
       - '2300:2300'
 
   sidekiq:
     <<: *web
+    container_name: sidekiq
     command: bundle exec sidekiq -r ./config/boot.rb -c 7
 
   postgres:
+    container_name: postgres
     image: postgres:11.1
     volumes:
       - .psqlrc:/root/.psqlrc:ro
@@ -64,7 +68,8 @@ services:
       - 5432
 
   redis:
-    image: redis:3.2-alpine
+    container_name: redis
+    image: redis:5.0-alpine
     volumes:
       - redis:/data
     ports:
