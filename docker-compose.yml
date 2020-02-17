@@ -41,7 +41,6 @@ services:
     command: /bin/bash
     ports:
       - '2300:2300'
-      - '3002:3002'
 
   hanami:
     <<: *web
