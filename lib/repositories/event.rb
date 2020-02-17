@@ -20,7 +20,7 @@ module Repositories
 
     def find_or_create(event_form)
       event = find_by_name(name: event_form[:name])
-      event || create(**event_form)
+      event || events.changeset(Changesets::Event::Create, event_form).commit
     end
 
     def find_by_name(name:)

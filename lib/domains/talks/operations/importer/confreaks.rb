@@ -20,9 +20,6 @@ module Domains
 
           # TODO: return Success or Failure
           def call
-            document = get_parsed_page(CONFREAKS_URL)
-            total_pages = document.css('.pagination').first.css('a')[8].text.to_i
-
             (1..total_pages).each do |page|
               html_page = get_parsed_page("#{CONFREAKS_URL}/?page=#{page}")
               ruby_events = select_ruby_events(html_page)
@@ -31,24 +28,23 @@ module Domains
                 event_url = "#{CONFREAKS_URL}#{ruby_event.css('.event-img').css('/a').first.attr(:href)}"
                 event_page = get_parsed_page(event_url)
 
+                event_hash = Parsers::Confreaks::EventParser.new(ruby_event).call
+                event = event_repo.find_or_create(event_hash)
+
                 event_page.css('.video').each_with_index do |talk_item, j|
                   talk_url = talk_item.css('.video-image').css('/a').first&.attr(:href)
                   talk_page = get_parsed_page("#{CONFREAKS_URL}#{talk_url}")
 
-                  event = Parsers::Confreaks::EventParser.new(ruby_event).call
-                  speakers = talk_page.css('.video-presenters').css('/a').map do |speaker_link|
+                  speaker_list = talk_page.css('.video-presenters').css('/a').map do |speaker_link|
                     Parsers::Confreaks::SpeakerParser.new(speaker_link).call
                   end
-                  talk = Parsers::Confreaks::TalkParser.new(talk_item, talk_page).call
+                  talk_hash = Parsers::Confreaks::TalkParser.new(talk_item, talk_page).call
+
                   talk_repo.transaction do
-                    # TODO: find or create event
-                    e = event_repo.events.changeset(Changesets::Event::Create, event).commit
-                    # TODO: find or create talk
-                    t = talk_repo.talks.changeset(Changesets::Talk::Create, talk.merge(event_id: e&.id)).commit
-                    speakers.map do |speaker_hash|
-                      # TODO: find or create speaker
-                      sp = speaker_repo.speakers.changeset(Changesets::Speaker::Create, speaker_hash).commit
-                      talk_speaker_repo.create(speaker_id: sp.id, talk_id: t.id)
+                    talk = talk_repo.find_or_create(talk_hash.merge(event_id: event&.id))
+                    speaker_list.map do |speaker_hash|
+                      speaker = speaker_repo.find_or_create(speaker_hash)
+                      talk_speaker_repo.find_or_create(speaker_id: speaker.id, talk_id: talk.id)
                     end
                   end
                 end
@@ -57,6 +53,11 @@ module Domains
           end
 
           private
+
+          def total_pages
+            document = get_parsed_page(CONFREAKS_URL)
+            document.css('.pagination').first.css('a')[8].text.to_i
+          end
 
           def select_ruby_events(html_page)
             event_nodes = html_page.css('.event-isotope')

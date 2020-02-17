@@ -34,4 +34,24 @@ RSpec.describe Repositories::Talk do
       expect(subject.id).to eq(approved_talk_id)
     end
   end
+
+  describe '#find_or_create' do
+    subject { described_class.new.find_or_create(talk_form) }
+
+    context 'when talk already exists' do
+      let(:talk_form) { { title: approved_talks.last.title } }
+
+      it 'returns approved talk' do
+        expect(subject.title).to eq(talk_form[:title])
+      end
+    end
+
+    context 'when talk does not exist' do
+      let(:talk_form) { Factory.structs[:unpublished_talk].attributes }
+
+      it 'returns recently created talk' do
+        expect(subject.id).to eq(talk_form[:id])
+      end
+    end
+  end
 end

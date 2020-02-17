@@ -26,6 +26,17 @@ module Repositories
       talks.order { created_at.desc }
     end
 
+    def find_or_create(talk_form)
+      talk = find_by_title(title: talk_form[:title])
+      talk || talks.changeset(Changesets::Talk::Create, talk_form).commit
+    end
+
+    def find_by_title(title:)
+      root
+        .where(title: title)
+        .one
+    end
+
     def find_unpublished(limit: nil, offset: nil)
       combined = talks
                  .combine(:speakers, :event)

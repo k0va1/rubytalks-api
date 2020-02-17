@@ -18,7 +18,7 @@ module Domains
           case result
           when Success
             # TODO: log some info about how many talks, events and speakers have been imported
-            logger.info("#{result.value![:amount]} talks successfully imported")
+            logger.info('Talks have successfully imported')
           when Failure
             logger.error('Could not import talks from confreaks.')
           end
