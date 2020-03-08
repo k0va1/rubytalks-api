@@ -20,7 +20,7 @@ services:
     volumes:
       - .:/app:cached
       - hanami_cache:/app/tmp/cache
-      - bundle:/bundle
+      - bundle:/usr/local/bundle
       - packs:/app/public/packs
       - .dockerdev/.psqlrc:/root/.psqlrc:ro
     environment:

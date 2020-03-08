@@ -11,6 +11,6 @@ RSpec.describe UserApi::Actions::Talks::Index do
     let(:result) { Entities::PaginatedCollection.new(data: talks, meta: {}) }
     let(:talks) { 3.times.map { Factory.structs[:talk] } }
 
-    it { expect(subject.status).to eq(200) }
+    it { expect(subject[0]).to eq(200) }
   end
 end

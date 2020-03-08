@@ -24,7 +24,7 @@ RSpec.describe AdminApi::Actions::Talks::Unpublished do
       3.times.map { Factory.structs[:talk] }
     end
 
-    it { expect(subject.status).to eq(200) }
+    it { expect(subject[0]).to eq(200) }
   end
 
   # context 'when operation is failure' do

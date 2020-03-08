@@ -13,7 +13,7 @@ module Domains
         # TODO: input checking
         def call(input)
           input = yield prepare_oembed(input)
-          talk = yield update_talk(input[:id], input.except(:id))
+          talk = yield update_talk(input[:id], **input.reject { |k, _v| k == :id })
           Success(talk)
         end
 

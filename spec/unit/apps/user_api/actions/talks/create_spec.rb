@@ -11,7 +11,16 @@ RSpec.describe UserApi::Actions::Talks::Create do
       allow(operation).to receive(:call).and_return(Success(Factory.structs[:talk]))
     end
 
-    let(:params) { { title: 'title', description: 'description', link: 'https://google.com', talked_at: DateTime.now } }
+    let(:speakers) { [first_name: 'Alex', last_name: 'Koval'] }
+    let(:params) do
+      {
+        title: 'title',
+        description: 'description',
+        link: 'https://google.com',
+        talked_at: DateTime.now,
+        speakers: speakers
+      }
+    end
 
     it 'invoke operation with params' do
       expect(operation).to receive(:call)

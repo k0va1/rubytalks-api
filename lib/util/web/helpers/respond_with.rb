@@ -41,7 +41,7 @@ module Util
         end
 
         def fetch_error(error_class)
-          ERRORS_MAPPER.find { |error| error_class.is_a?(error[:error_class]) }
+          ERRORS_MAPPER.find { |error| error_class == error[:error_class] }
         end
       end
     end
