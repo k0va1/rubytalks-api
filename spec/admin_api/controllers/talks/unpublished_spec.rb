@@ -1,4 +1,4 @@
-# # frozen_string_literal: true
+# frozen_string_literal: true
 
 # RSpec.describe Admin::Controllers::Talks::Unpublished do
 #   subject { action.call(params) }

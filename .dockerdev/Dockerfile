@@ -33,7 +33,6 @@ ENV PATH /app/bin:$BUNDLE_BIN:$PATH
 RUN gem update --system && \
     gem install bundler:$BUNDLER_VERSION
 
-RUN bundle install -j 5
 # Create a directory for the app code
 RUN mkdir -p /app
 

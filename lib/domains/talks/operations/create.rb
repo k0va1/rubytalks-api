@@ -53,8 +53,8 @@ module Domains
         def create_talk(talk_form, oembed, event_id = nil)
           talk_form = talk_form.merge(
             embed_code: oembed,
-            event_id:   event_id,
-            state:      'unpublished'
+            event_id: event_id,
+            state: 'unpublished'
           )
 
           talk = talk_repo.talks.changeset(Changesets::Talk::Create, talk_form).commit
@@ -73,12 +73,12 @@ module Domains
         def find_or_create_speaker(speaker_form)
           slug = slug_generator.generate(
             first_name: speaker_form[:first_name],
-            last_name:  speaker_form[:last_name]
+            last_name: speaker_form[:last_name]
           )
 
           speaker_form = speaker_form.symbolize_keys.merge(
             state: 'unpublished',
-            slug:  slug
+            slug: slug
           )
 
           speaker = speaker_repo.find_or_create(speaker_form)

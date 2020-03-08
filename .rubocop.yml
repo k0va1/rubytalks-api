@@ -9,6 +9,7 @@ AllCops:
   ExtraDetails: true
   Exclude:
   # Ignore vendored gems
+  - bundle/**/*
   - vendor/**/*
   - rakelib/**/*.rake
   RSpec:
@@ -64,7 +65,7 @@ Naming/FileName:
   Exclude:
   - apps/*-*/lib/*-*.rb
 
-Naming/UncommunicativeMethodParamName:
+Naming/MethodParameterName:
   Enabled: false
 
 Naming/MemoizedInstanceVariableName:

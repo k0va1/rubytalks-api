@@ -11,9 +11,9 @@ module Parsers
 
       def call
         {
-          name:       name,
+          name: name,
           started_at: started_at,
-          ended_at:   ended_at
+          ended_at: ended_at
         }
       end
 
@@ -24,11 +24,9 @@ module Parsers
       end
 
       def started_at
-        if start_month && start_day && year
-          DateTime.parse("#{start_month} #{start_day} #{year}")
-        else
-          raise 'Could not parse :started_at'
-        end
+        raise 'Could not parse :started_at' unless start_month && start_day && year
+
+        DateTime.parse("#{start_month} #{start_day} #{year}")
       end
 
       def ended_at
@@ -54,7 +52,8 @@ module Parsers
       end
 
       def start_month
-        event_page.css('.event-box').css('h4').text.scan(/\s*([A-Za-z]+)\s+\d+(?<=\s-([A-Za-z]))?/).flatten.compact.first
+        event_page.css('.event-box').css('h4').text.scan(/\s*([A-Za-z]+)\s+\d+(?<=\s-([A-Za-z]))?/).flatten.compact
+                  .first
       end
 
       def end_month

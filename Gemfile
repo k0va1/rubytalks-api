@@ -44,8 +44,8 @@ group :development do
 end
 
 group :test, :development do
-  gem 'dotenv', '~> 2.4'
   gem 'database_cleaner'
+  gem 'dotenv', '~> 2.4'
   # fake data
   gem 'faker'
   # debug
@@ -53,11 +53,11 @@ group :test, :development do
 end
 
 group :test do
+  gem 'json_matchers'
+  gem 'rom-factory'
   gem 'rspec'
   gem 'simplecov', require: false
   gem 'simplecov-json', require: false
-  gem 'rom-factory'
-  gem 'json_matchers'
   gem 'webmock'
 end
 

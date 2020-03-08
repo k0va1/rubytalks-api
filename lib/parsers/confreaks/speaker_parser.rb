@@ -12,10 +12,10 @@ module Parsers
 
       def call
         {
-          first_name:  first_name,
+          first_name: first_name,
           middle_name: middle_name,
-          last_name:   last_name,
-          slug:        slug
+          last_name: last_name,
+          slug: slug
         }
       end
 

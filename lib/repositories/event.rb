@@ -41,7 +41,6 @@ module Repositories
       root.order(:ended_at)
     end
 
-
     private
 
     def apply_pagination(relation, offset, limit)

@@ -19,19 +19,19 @@ module Domains
           BUZZWORDS = %w[ruby rails goruco .rb euruko].freeze
 
           # TODO: return Success or Failure
-          def call
+          def call # rubocop:disable Metrics/AbcSize,Metrics/MethodLength
             (1..total_pages).each do |page|
               html_page = get_parsed_page("#{CONFREAKS_URL}/?page=#{page}")
               ruby_events = select_ruby_events(html_page)
 
-              ruby_events.each_with_index do |ruby_event, i|
+              ruby_events.each do |ruby_event|
                 event_url = "#{CONFREAKS_URL}#{ruby_event.css('.event-img').css('/a').first.attr(:href)}"
                 event_page = get_parsed_page(event_url)
 
                 event_hash = Parsers::Confreaks::EventParser.new(ruby_event).call
                 event = event_repo.find_or_create(event_hash)
 
-                event_page.css('.video').each_with_index do |talk_item, j|
+                event_page.css('.video').each do |talk_item|
                   talk_url = talk_item.css('.video-image').css('/a').first&.attr(:href)
                   talk_page = get_parsed_page("#{CONFREAKS_URL}#{talk_url}")
 
@@ -68,11 +68,16 @@ module Domains
           end
 
           def event_without_videos?(event_node)
-            ['presentations available on youtube', '0 available presentations'].any? { |text| event_node.css('.text-muted').text.downcase.include?(text) }
+            ['presentations available on youtube', '0 available presentations'].any? do |text|
+              event_node.css('.text-muted')
+                        .text
+                        .downcase
+                        .include?(text)
+            end
           end
 
           def get_parsed_page(url)
-            Nokogiri::HTML(open(url, read_timeout: 30, open_timeout: 30))
+            Nokogiri::HTML(URI.open(url, read_timeout: 30, open_timeout: 30))
           end
         end
       end
