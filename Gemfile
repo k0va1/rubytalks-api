@@ -40,6 +40,7 @@ gem 'sidekiq-cron'
 group :development do
   # code style
   gem 'rubocop', require: false
+  gem 'rubocop-faker'
   gem 'rubocop-rspec'
 end
 

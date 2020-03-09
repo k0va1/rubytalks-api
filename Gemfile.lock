@@ -205,6 +205,8 @@ GEM
       rainbow (>= 2.2.2, < 4.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 1.4.0, < 1.7)
+    rubocop-faker (0.2.0)
+      rubocop (>= 0.74)
     rubocop-rspec (1.38.0)
       rubocop (>= 0.68.1)
     ruby-oembed (0.12.0)
@@ -267,6 +269,7 @@ DEPENDENCIES
   rom-sql
   rspec
   rubocop
+  rubocop-faker
   rubocop-rspec
   ruby-oembed
   semantic_logger
