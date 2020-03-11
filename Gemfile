@@ -25,6 +25,7 @@ gem 'dry-validation'
 # logging
 gem 'awesome_print'
 gem 'semantic_logger'
+gem 'sentry-raven'
 
 # generate embed from url
 gem 'ruby-oembed'
@@ -38,6 +39,7 @@ gem 'sidekiq'
 gem 'sidekiq-cron'
 
 group :development do
+  gem 'guard-puma'
   # code style
   gem 'rubocop', require: false
   gem 'rubocop-faker'
@@ -64,4 +66,8 @@ end
 
 group :production do
   gem 'puma'
+end
+
+group :plugins do
+  gem 'hanami-reloader', '~> 1.0.0.alpha1'
 end
