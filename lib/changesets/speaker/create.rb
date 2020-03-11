@@ -3,10 +3,9 @@
 module Changesets
   module Speaker
     class Create < ROM::Changeset::Create
-      map do 
+      map do
         add_timestamps
       end
     end
   end
 end
-

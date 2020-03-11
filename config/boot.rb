@@ -2,6 +2,7 @@
 
 require 'bundler/setup'
 require 'hanami'
+require 'sidekiq'
 
 Bundler.require(:default, :development)
 

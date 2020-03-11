@@ -6,7 +6,7 @@ ROM::SQL.migration do
       primary_key :id
 
       column :name, String, null: false
-      column :city, String, null: false
+      column :city, String
 
       column :started_at, DateTime
       column :ended_at, DateTime

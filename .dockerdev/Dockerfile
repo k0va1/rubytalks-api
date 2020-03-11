@@ -3,6 +3,11 @@ FROM ruby:$RUBY_VERSION
 
 ARG PG_MAJOR
 ARG BUNDLER_VERSION
+ARG USER_ID
+ARG GROUP_ID
+
+RUN addgroup --gid $GROUP_ID rubytalks
+RUN adduser --disabled-password --gecos '' --uid $USER_ID --gid $GROUP_ID rubytalks
 
 # Add PostgreSQL to sources list
 RUN curl -sSL https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add - \
@@ -21,20 +26,15 @@ RUN apt-get update -qq && DEBIAN_FRONTEND=noninteractive apt-get -yq dist-upgrad
 
 # Configure bundler and PATH
 ENV LANG=C.UTF-8 \
-  GEM_HOME=/bundle \
   BUNDLE_JOBS=4 \
   BUNDLE_RETRY=3
-ENV BUNDLE_PATH $GEM_HOME
-ENV BUNDLE_APP_CONFIG=$BUNDLE_PATH \
-  BUNDLE_BIN=$BUNDLE_PATH/bin
-ENV PATH /app/bin:$BUNDLE_BIN:$PATH
 
 # Upgrade RubyGems and install required Bundler version
 RUN gem update --system && \
     gem install bundler:$BUNDLER_VERSION
 
-RUN bundle install -j 5
 # Create a directory for the app code
 RUN mkdir -p /app
 
+USER rubytalks
 WORKDIR /app

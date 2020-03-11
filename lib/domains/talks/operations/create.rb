@@ -15,7 +15,7 @@ module Domains
         ]
 
         def call(talk_form) # rubocop:disable Metrics/AbcSize
-          talk_form = talk_form.symbolize_keys
+          talk_form = talk_form.transform_keys(&:to_sym)
           oembed    = yield generate_oembed(talk_form[:link])
 
           talk_repo.transaction do
@@ -53,8 +53,8 @@ module Domains
         def create_talk(talk_form, oembed, event_id = nil)
           talk_form = talk_form.merge(
             embed_code: oembed,
-            event_id:   event_id,
-            state:      'unpublished'
+            event_id: event_id,
+            state: 'unpublished'
           )
 
           talk = talk_repo.talks.changeset(Changesets::Talk::Create, talk_form).commit
@@ -73,12 +73,12 @@ module Domains
         def find_or_create_speaker(speaker_form)
           slug = slug_generator.generate(
             first_name: speaker_form[:first_name],
-            last_name:  speaker_form[:last_name]
+            last_name: speaker_form[:last_name]
           )
 
-          speaker_form = speaker_form.symbolize_keys.merge(
+          speaker_form = speaker_form.transform_keys(&:to_sym).merge(
             state: 'unpublished',
-            slug:  slug
+            slug: slug
           )
 
           speaker = speaker_repo.find_or_create(speaker_form)
@@ -88,7 +88,7 @@ module Domains
         def find_or_create_event(event_form)
           return Success(nil) unless event_form
 
-          event_form = event_form.symbolize_keys.merge(
+          event_form = event_form.transform_keys(&:to_sym).merge(
             state: 'unpublished'
           )
 

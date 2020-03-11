@@ -25,48 +25,49 @@ gem 'dry-validation'
 # logging
 gem 'awesome_print'
 gem 'semantic_logger'
+gem 'sentry-raven'
 
 # generate embed from url
 gem 'ruby-oembed'
 
-# YouTube client
-gem 'yt', '~> 0.28.0'
+# xml parser
+gem 'nokogiri'
 
 # background jobs
 gem 'hiredis'
 gem 'sidekiq'
+gem 'sidekiq-cron'
 
 group :development do
+  gem 'guard-puma'
   # code style
   gem 'rubocop', require: false
+  gem 'rubocop-faker'
   gem 'rubocop-rspec'
 end
 
 group :test, :development do
-  gem 'dotenv', '~> 2.4'
-
   gem 'database_cleaner'
-
+  gem 'dotenv', '~> 2.4'
   # fake data
   gem 'faker'
-
   # debug
   gem 'pry-byebug'
 end
 
 group :test do
+  gem 'json_matchers'
+  gem 'rom-factory'
   gem 'rspec'
-
   gem 'simplecov', require: false
   gem 'simplecov-json', require: false
-
-  gem 'rom-factory'
-
-  gem 'json_matchers'
-
   gem 'webmock'
 end
 
 group :production do
   gem 'puma'
+end
+
+group :plugins do
+  gem 'hanami-reloader', '~> 1.0.0.alpha1'
 end

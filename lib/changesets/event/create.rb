@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module Changesets
-  module Talk
+  module Event
     class Create < ROM::Changeset::Create
       map do
         add_timestamps

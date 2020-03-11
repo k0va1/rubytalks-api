@@ -13,7 +13,7 @@ module Util
 
         total = relation.count
         page = offset / limit + 1
-        total_pages = total / limit
+        total_pages = (total / limit.to_f).ceil
 
         collection = Entities::PaginatedCollection.new(
           data: with_opts.to_a,

@@ -11,6 +11,6 @@ RSpec.describe UserApi::Actions::Events::Index do
     let(:result) { Entities::PaginatedCollection.new(data: events, meta: {}) }
     let(:events) { 3.times.map { Factory.structs[:event] } }
 
-    it { expect(subject.status).to eq(200) }
+    it { expect(subject[0]).to eq(200) }
   end
 end

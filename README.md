@@ -22,9 +22,10 @@ Prepare database for `development` and `test` environments:
 
 ```
 docker-compose run web bundle i
-docker-compose run web bundle exec hanami db prepare
-docker-compose run web bundle exec rake seeds
-HANAMI_ENV=test docker-compose run web bundle exec hanami db prepare
+docker-compose up -d postgres
+docker-compose exec postgres bash -c "createdb -U postgres rubytalks_development"
+docker-compose exec postgres bash -c "createdb -U postgres rubytalks_test"
+docker-compose run web bundle exec rake db:migrate
 ```
 
 How to run tests:
@@ -79,9 +80,9 @@ REDISTOGO_URL="redis://localhost:6379"
 
 
 ```
-bundle exec hanami db prepare
-bundle exec rake seeds
-HANAMI_ENV=test bundle exec hanami db prepare
+createdb -U postgres rubytalks_development
+createdb -U postgres rubytalks_test
+bundle exec rake db:migrate
 ```
 
 How to run tests:
@@ -104,8 +105,15 @@ docker-compose run web bundle exec hanami s
 
 When you run the server the app will be available at http://localhost:2300
 
+## Background jobs
+
+If you want to run background jobs during development, you have to start `sidekiq` service.
+Run `docker-compose up sidekiq`. Sidekiq dashboard will be available at https://localhost:2300/sidekiq
+Default credentials are: `admin/admin`
+
 ## Deploy
 
+TODO: update later!
 ```
 heroku container:login
 heroku container:push web -a rubytalks-org
@@ -113,3 +121,12 @@ heroku container:release web -a rubytalks-org
 ```
 
 Show logs: `heroku logs --tail -a rubytalks-org`
+
+## Conferences list
+
+* !!Con http://bangbangcon.com
+* RailsConf https://railsconf.com
+* RubyHack https://rubyhack.com
+* RubyConf http://rubyconf.org
+* KeepRubyWeird https://keeprubyweird.com
+* GoRuCo http://goruco.com

@@ -3,8 +3,7 @@
 module UserApi
   module Actions
     module Params
-      # TODO:
-      # 1. I don't like use class accessors
+      # TODO: 1. I don't like use class accessors
       # 2. must choose better name for this method. Maybe contract?
 
       def params(&block)
@@ -16,4 +15,3 @@ module UserApi
     end
   end
 end
-

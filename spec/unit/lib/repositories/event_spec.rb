@@ -14,7 +14,7 @@ RSpec.describe Repositories::Event do
       end
     end
 
-    context 'when event exists' do
+    context 'when event does not exist' do
       let(:event_id) { -1 }
 
       it 'raises an error' do

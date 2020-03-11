@@ -18,7 +18,7 @@ module AdminApi
           input = validate_params(request.params)
           result = decline.call(input[:id])
 
-          respond_with_success(response, result.value!, with: Serializers::Talk)
+          respond_with(response, result, Serializers::Talk)
         end
       end
     end

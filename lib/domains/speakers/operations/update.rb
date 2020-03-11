@@ -11,7 +11,7 @@ module Domains
 
         # TODO: input checking
         def call(input)
-          speaker = speaker_repo.update(input[:id], **input.except(:id))
+          speaker = speaker_repo.update(input[:id], **input.reject { |k, _v| k == :id })
           Success(speaker)
         end
       end

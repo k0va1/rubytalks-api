@@ -10,7 +10,7 @@ RSpec.describe UserApi::Actions::Speakers::Show do
     let(:operation) { ->(*) { Success(speaker) } }
     let(:params) { { id: speaker.id } }
 
-    it { expect(subject.status).to eq(200) }
+    it { expect(subject[0]).to eq(200) }
   end
 
   context 'when operation is failure' do
@@ -18,7 +18,7 @@ RSpec.describe UserApi::Actions::Speakers::Show do
     let(:operation) { ->(*) { Failure(ROM::TupleCountMismatchError) } }
 
     it 'redirects to 404' do
-      expect(subject.status).to eq(404)
+      expect(subject[0]).to eq(404)
     end
   end
 end

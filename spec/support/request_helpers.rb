@@ -53,7 +53,6 @@ module RequestHelpers
 
   def perform_request(request)
     @response = APP.call(request.env)
-    @response.close
   end
 
   def create_request(verb, path, options)
@@ -65,15 +64,15 @@ module RequestHelpers
   end
 
   def response_status
-    response.status
+    response[0]
   end
 
   def response_headers
-    response.headers
+    response[1]
   end
 
   def response_body
-    response.body[0]
+    response[2].instance_variable_get(:@body).first
   end
 
   def response_hash
