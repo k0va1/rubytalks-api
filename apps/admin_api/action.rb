@@ -13,6 +13,11 @@ module AdminApi
     extend Actions::Params
 
     class_attribute :contract
+
+    # TODO: remove after fix https://github.com/hanami/controller/issues/307
+    def call(env)
+      super.to_a
+    end
   end
 
   module Actions; end
