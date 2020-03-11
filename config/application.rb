@@ -4,6 +4,7 @@ require 'hanami/middleware/body_parser'
 require_relative '../lib/operation'
 require_relative '../lib/types'
 require_relative '../system/container'
+require_relative '../lib/util/common_logger'
 
 require_relative '../apps/admin_api/action'
 require_relative '../apps/user_api/action'
@@ -16,6 +17,7 @@ module RubyTalks
 
     config.logger = Hanami::Container[:my_logger]
     config.middleware.use Raven::Rack
+    config.middleware.use Hanami::CommonLogger, Hanami::Container[:my_logger]
     config.middleware.use Hanami::Middleware::BodyParser, :json
   end
 end
