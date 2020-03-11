@@ -6,6 +6,9 @@ name: rubytalks
 steps:
   - name: rubocop
     image: ruby:2.6.3
+    volumes:
+      - name: bundle
+        path: /usr/local/bundle
     commands:
       - gem install bundler
       - bundle install
@@ -13,9 +16,13 @@ steps:
 
   - name: rspec
     image: ruby:2.6.3
+    volumes:
+      - name: bundle
+        path: /usr/local/bundle
     commands:
       - gem install bundler
       - bundle install
+      - HANAMI_ENV=test bundle exec rake db:migrate
       - bundle exec rspec
 
   - name: notify
@@ -32,10 +39,17 @@ steps:
         - success
         - failure
 
-#services:
-#  - name: pg
-#    image: postgres
-#    environment:
-#      - POSTGRES_USER=postgres
-#      - POSTGRES_PASSWORD=postgres
-#      - POSTGRES_DB=rubytalks-test
+services:
+  - name: postgres
+    image: postgres:11.1
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: rubytalks_test
+
+  - name: redis
+    image: redis:5.0-alpine
+
+volumes:
+  - name: bundle
+    temp: {}

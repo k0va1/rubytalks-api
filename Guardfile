@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 group :server do
   guard 'rack', port: ENV['HANAMI_PORT'] || 2300 do
     watch(%r{config/*})
@@ -5,4 +7,3 @@ group :server do
     watch(%r{apps/*})
   end
 end
-
