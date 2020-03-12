@@ -58,7 +58,7 @@ bundle install
 
 Prepare database for `development` and `test` environments:
 
-Change `DATABASE_URL` and `REDISTOGO_URL` in `.env.development` and `.env.test`.
+Change `DATABASE_URL` and `REDIS_URL` in `.env.development` and `.env.test`.
 
 Example:
 
@@ -66,7 +66,7 @@ Example:
 ```
 ...
 DATABASE_URL="postgresql://localhost/rubytalks_development"
-REDISTOGO_URL="redis://localhost:6379"
+REDIS_URL="redis://localhost:6379"
 ...
 ```
 
@@ -74,7 +74,7 @@ REDISTOGO_URL="redis://localhost:6379"
 ```
 ...
 DATABASE_URL="postgresql://localhost/rubytalks_test"
-REDISTOGO_URL="redis://localhost:6379"
+REDIS_URL="redis://localhost:6379"
 ...
 ```
 

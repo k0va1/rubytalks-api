@@ -20,6 +20,7 @@ RSpec.xdescribe AdminApi::Actions::Talks::Update do
       let(:params) { { id: talk.id } }
 
       it { expect(subject.first).to eq(302) }
+
       it 'redirects to dashboard' do
         subject
         expect(action.exposures[:flash][:success]).to eq('Talk has been updated')
@@ -32,6 +33,7 @@ RSpec.xdescribe AdminApi::Actions::Talks::Update do
       let(:operation) { ->(*) { Failure(nil) } }
 
       it { expect(subject.first).to eq(302) }
+
       it 'redirects to dashboard' do
         subject
         expect(action.exposures[:flash][:error]).to eq('Something wrong. Talk has not been updated')
@@ -47,6 +49,7 @@ RSpec.xdescribe AdminApi::Actions::Talks::Update do
     let(:params) { { id: talk.id, talk: talk.to_h.merge(title: 'new title', speakers: [speaker.to_h]) } }
 
     it { expect(subject.first).to eq(302) }
+
     it 'redirects to dashboard' do
       subject
       expect(action.exposures[:flash][:success]).to eq('Talk has been updated')
