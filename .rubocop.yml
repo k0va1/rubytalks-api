@@ -27,6 +27,7 @@ Metrics/BlockLength:
   - 'apps/**/application.rb'
   # Views
   - 'apps/**/views/**/*.rb'
+  - 'config/routes.rb'
 
 Metrics/ClassLength:
   Exclude:
