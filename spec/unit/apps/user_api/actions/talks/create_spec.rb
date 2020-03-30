@@ -8,8 +8,12 @@ RSpec.describe UserApi::Actions::Talks::Create do
 
   context 'when params are valid' do
     before do
-      allow(operation).to receive(:call).and_return(Success(Factory.structs[:talk]))
+      allow(operation).to receive(:call).and_return(Success(talk))
     end
+
+    let(:speaking) { Factory[:speaking] }
+    let(:talk_repo) { Repositories::Talk.new(Hanami::Container[:rom]) }
+    let(:talk) { talk_repo.talks.combine(:speakers).by_pk(speaking.talk.id).one }
 
     let(:speakers) { [first_name: 'Alex', last_name: 'Koval'] }
     let(:params) do

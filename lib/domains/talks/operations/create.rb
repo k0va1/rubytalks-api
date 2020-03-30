@@ -10,7 +10,7 @@ module Domains
           talk_repo: 'repositories.talk',
           speaker_repo: 'repositories.speaker',
           event_repo: 'repositories.event',
-          talks_speakers_repo: 'repositories.talks_speaker',
+          speaking_repo: 'repositories.speaking',
           slug_generator: 'domains.speakers.util.slug_generator'
         ]
 
@@ -22,7 +22,7 @@ module Domains
             speakers = yield find_or_create_speakers(talk_form[:speakers])
             event    = yield find_or_create_event(talk_form[:event])
             talk     = yield event ? create_talk(talk_form, oembed, event.id) : create_talk(talk_form, oembed)
-            yield create_talk_speakers(talk.id, speakers)
+            yield create_speakings(talk.id, speakers)
             Success(talk)
           end
         end
@@ -33,20 +33,20 @@ module Domains
           Try(OEmbed::Error) { oembed.get(link).html }.to_result
         end
 
-        def create_talk_speakers(talk_id, speakers)
-          Dry::Monads::List[*speakers.map { |speaker| create_talk_speaker(talk_id, speaker.id) }]
+        def create_speakings(talk_id, speakers)
+          Dry::Monads::List[*speakers.map { |speaker| create_speaking(talk_id, speaker.id) }]
             .typed(Dry::Monads::Result)
             .traverse
         end
 
         # move to approve operation?
-        def create_talk_speaker(talk_id, speaker_id)
-          talk_speaker = talks_speakers_repo.create(talk_id: talk_id, speaker_id: speaker_id)
+        def create_speaking(talk_id, speaker_id)
+          speaking = speaking_repo.create(talk_id: talk_id, speaker_id: speaker_id)
 
-          if talk_speaker
-            Success(talk_speaker)
+          if speaking
+            Success(speaking)
           else
-            Failure('could not create talk_speaker')
+            Failure('could not create speaking')
           end
         end
 

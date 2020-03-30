@@ -2,7 +2,7 @@
 
 ROM::SQL.migration do
   change do
-    create_table :talks_speakers do
+    create_table :speakings do
       primary_key :id
 
       foreign_key :talk_id, :talks, null: false, on_delete: :cascade

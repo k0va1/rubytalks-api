@@ -37,6 +37,7 @@ module Domains
 
         def update_talk_state(id)
           talk_repo.update(id, state: 'approved')
+          talk_repo.talks.combine(:speakers).by_pk(id).one
         end
 
         def update_speakers_state(speakers)

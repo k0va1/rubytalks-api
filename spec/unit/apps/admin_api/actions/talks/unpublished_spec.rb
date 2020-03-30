@@ -20,8 +20,10 @@ RSpec.describe AdminApi::Actions::Talks::Unpublished do
       allow(service).to receive(:unpublished).and_return(Success(result))
     end
 
+    let(:talk_repo) { Repositories::Talk.new(Hanami::Container[:rom]) }
+    let(:speakings) { 3.times.map { Factory[:speaking] } }
     let(:talks) do
-      3.times.map { Factory.structs[:talk] }
+      talk_repo.talks.combine(:speakers).where(id: speakings.map(&:talk_id)).to_a
     end
 
     it { expect(subject[0]).to eq(200) }

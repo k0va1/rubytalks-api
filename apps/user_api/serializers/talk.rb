@@ -13,6 +13,8 @@ module UserApi
       property :talked_at
       property :updated_at
       property :created_at
+
+      collection :speakers, decorator: UserApi::Serializers::Speaker
     end
   end
 end

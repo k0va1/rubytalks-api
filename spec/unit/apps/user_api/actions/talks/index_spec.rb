@@ -9,7 +9,11 @@ RSpec.describe UserApi::Actions::Talks::Index do
   context 'when operation is success' do
     let(:service) { instance_double(UserApi::Services::Talks, approved_talks_list: Success(result)) }
     let(:result) { Entities::PaginatedCollection.new(data: talks, meta: {}) }
-    let(:talks) { 3.times.map { Factory.structs[:talk] } }
+    let(:talk_repo) { Repositories::Talk.new(Hanami::Container[:rom]) }
+    let(:speakings) { 3.times.map { Factory[:speaking] } }
+    let(:talks) do
+      talk_repo.talks.combine(:speakers).where(id: speakings.map(&:talk_id)).to_a
+    end
 
     it { expect(subject[0]).to eq(200) }
   end
