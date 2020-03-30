@@ -29,10 +29,9 @@ module Operation
   include Dry::Monads::Try::Mixin
   include Dry::Monads::Result::Mixin
   include Dry::Monads::List::Mixin
-  include Dry::Monads::Do::All
 
   def self.included(base)
-    base.include Dry::Monads::Do.for(:call)
+    base.include Dry::Monads::Do
     base.include Import[
       validator: 'util.validator'
     ]

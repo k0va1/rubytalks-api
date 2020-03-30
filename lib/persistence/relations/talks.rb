@@ -5,8 +5,8 @@ module Persistence
     class Talks < ROM::Relation[:sql]
       schema(:talks, infer: true) do
         associations do
-          has_many :talks_speakers
-          has_many :speakers, through: :talks_speakers
+          has_many :speakings
+          has_many :speakers, through: :speakings
           belongs_to :event
         end
       end

@@ -6,7 +6,9 @@ RSpec.describe UserApi::Actions::Talks::Show do
   let(:action) { described_class.new(configuration: Hanami::Controller::Configuration.new, find_approved: operation) }
 
   context 'when operation is success' do
-    let(:talk) { Factory.structs[:talk] }
+    let(:speaking) { Factory[:speaking] }
+    let(:talk_repo) { Repositories::Talk.new(Hanami::Container[:rom]) }
+    let(:talk) { talk_repo.talks.combine(:speakers).by_pk(speaking.talk.id).one }
     let(:operation) { ->(*) { Success(talk) } }
     let(:params) { { id: talk.id } }
 
