@@ -5,6 +5,7 @@ GEM
       public_suffix (>= 2.0.2, < 5.0)
     ast (2.4.0)
     awesome_print (1.8.0)
+    bcrypt (3.1.13)
     builder (3.2.4)
     byebug (11.1.1)
     coderay (1.1.2)
@@ -141,6 +142,7 @@ GEM
     json_matchers (0.11.1)
       json_schema
     json_schema (0.20.8)
+    jwt (2.2.1)
     listen (3.2.1)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
@@ -279,6 +281,8 @@ GEM
       concurrent-ruby (~> 1.0)
     uber (0.1.0)
     unicode-display_width (1.6.1)
+    warden (1.2.8)
+      rack (>= 2.0.6)
     webmock (3.8.2)
       addressable (>= 2.3.6)
       crack (>= 0.3.2)
@@ -291,6 +295,7 @@ PLATFORMS
 
 DEPENDENCIES
   awesome_print
+  bcrypt
   database_cleaner
   dotenv (~> 2.4)
   dry-monads (~> 1.1.0)
@@ -301,6 +306,7 @@ DEPENDENCIES
   hanami-reloader (~> 1.0.0.alpha1)
   hiredis
   json_matchers
+  jwt
   multi_json
   nokogiri
   oj
@@ -323,6 +329,7 @@ DEPENDENCIES
   sidekiq-cron
   simplecov
   simplecov-json
+  warden
   webmock
   xml-sitemap
 
