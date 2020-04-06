@@ -6,6 +6,7 @@ require_relative '../lib/types'
 require_relative '../system/container'
 require_relative '../lib/middlewares/common_logger'
 require_relative '../lib/middlewares/cors'
+require_relative '../lib/middlewares/admin_api_authentication'
 
 require_relative '../apps/admin_api/action'
 require_relative '../apps/user_api/action'
@@ -21,5 +22,6 @@ module RubyTalks
     config.middleware.use Hanami::CommonLogger, Hanami::Container[:my_logger]
     config.middleware.use Hanami::Middleware::BodyParser, :json
     config.middleware.use RubyTalks::Cors
+    config.middleware.use RubyTalks::AdminApiAuthentication
   end
 end
