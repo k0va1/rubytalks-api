@@ -4,7 +4,16 @@
 RSpec.xdescribe AdminApi::Actions::Talks::Update do
   subject { action.call(params) }
 
-  let(:action) { described_class.new(operation: operation, talk_repo: talk_repo, form: form) }
+  let(:action) do
+    described_class.new(
+      configuration: Hanami::Controller::Configuration.new,
+      operation: operation,
+      talk_repo: talk_repo,
+      form: form,
+      authenticator: authenticator
+    )
+  end
+  let(:authenticator) { instance_double(AdminApi::Services::Authenticator, call: true) }
 
   context 'when form is valid' do
     let(:form) { double('Web::Forms::TalkForm') }

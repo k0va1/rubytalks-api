@@ -33,6 +33,10 @@ gem 'ruby-oembed'
 # xml parser
 gem 'nokogiri'
 
+gem 'bcrypt'
+gem 'jwt'
+gem 'warden'
+
 # background jobs
 gem 'hiredis'
 gem 'sidekiq'

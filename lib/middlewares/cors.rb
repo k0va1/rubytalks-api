@@ -15,7 +15,7 @@ module RubyTalks
     def cors_headers
       { 'Access-Control-Allow-Origin' => ENV.fetch('ALLOW_ORIGIN'),
         'Access-Control-Allow-Methods' => %w[GET POST PUT PATCH OPTIONS DELETE].join(','),
-        'Access-Control-Allow-Headers' => %w[Content-Type Accept Auth-Token].join(',') }
+        'Access-Control-Allow-Headers' => %w[Content-Type Accept Authorization].join(',') }
     end
   end
 end
