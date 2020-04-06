@@ -3,8 +3,15 @@
 RSpec.describe AdminApi::Actions::Talks::Decline do
   subject { action.call(params) }
 
-  let(:action) { described_class.new(configuration: Hanami::Controller::Configuration.new, decline: operation) }
+  let(:action) do
+    described_class.new(
+      configuration: Hanami::Controller::Configuration.new,
+      decline: operation,
+      authenticator: authenticator
+    )
+  end
   let(:operation) { instance_double(Domains::Talks::Operations::Decline) }
+  let(:authenticator) { instance_double(AdminApi::Services::Authenticator, call: true) }
 
   context 'when operation is success' do
     let(:speaking) { Factory[:speaking] }

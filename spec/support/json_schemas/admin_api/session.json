@@ -1,0 +1,14 @@
+{
+  "id": "file:/admin_api/session.json",
+  "type": "object",
+  "required": [
+    "id",
+    "username",
+    "access_token"
+  ],
+  "properties": {
+    "id": { "type": "number" },
+    "username": { "type": "string" },
+    "access_token": { "type": "string" }
+  }
+}

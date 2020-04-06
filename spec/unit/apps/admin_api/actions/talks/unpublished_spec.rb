@@ -4,7 +4,14 @@ RSpec.describe AdminApi::Actions::Talks::Unpublished do
   subject { action.call(params) }
 
   let(:params) { {} }
-  let(:action) { described_class.new(configuration: Hanami::Controller::Configuration.new, talks: service) }
+  let(:action) do
+    described_class.new(
+      configuration: Hanami::Controller::Configuration.new,
+      talks: service,
+      authenticator: authenticator
+    )
+  end
+  let(:authenticator) { instance_double(AdminApi::Services::Authenticator, call: true) }
 
   context 'when operation is success' do
     let(:service) { instance_double(AdminApi::Services::Talks) }

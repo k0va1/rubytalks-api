@@ -34,7 +34,7 @@ module Domains
         def update_talk(id, input)
           talk_repo.update(id, **input)
           talk = talk_repo.talks.combine(:speakers).by_pk(id).one
-          
+
           if talk
             Success(talk)
           else

@@ -3,8 +3,15 @@
 RSpec.describe AdminApi::Actions::Talks::Approve do
   subject { action.call(params) }
 
-  let(:action) { described_class.new(configuration: Hanami::Controller::Configuration.new, approve: operation) }
+  let(:action) do
+    described_class.new(
+      configuration: Hanami::Controller::Configuration.new,
+      approve: operation,
+      authenticator: authenticator
+    )
+  end
   let(:operation) { instance_double(Domains::Talks::Operations::Approve) }
+  let(:authenticator) { instance_double(AdminApi::Services::Authenticator, call: true) }
 
   # TODO: use structs instead of DB
   context 'when operation is success' do
