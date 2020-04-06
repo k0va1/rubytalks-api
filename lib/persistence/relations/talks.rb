@@ -7,6 +7,10 @@ module Persistence
         associations do
           has_many :speakings
           has_many :speakers, through: :speakings
+
+          has_many :taggings
+          has_many :tags, through: :taggings
+
           belongs_to :event
         end
       end
