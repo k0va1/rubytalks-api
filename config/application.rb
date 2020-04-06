@@ -4,7 +4,7 @@ require 'hanami/middleware/body_parser'
 require_relative '../lib/operation'
 require_relative '../lib/types'
 require_relative '../system/container'
-require_relative '../lib/util/common_logger'
+require_relative '../lib/middlewares/common_logger'
 require_relative '../lib/middlewares/cors'
 
 require_relative '../apps/admin_api/action'
