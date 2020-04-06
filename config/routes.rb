@@ -26,6 +26,8 @@ Hanami.application.routes do
 
     resources :speakers, only: [:update]
     resources :events, only: [:update]
+
+    post '/login', to: 'sessions#create'
   end
 
   mount :user_api, at: '/' do
