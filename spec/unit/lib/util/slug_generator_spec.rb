@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
 RSpec.describe Util::SlugGenerator do
-  let(:slug_generator) { Hanami::Container['util.slug_generator'] }
-
   subject { slug_generator.call(args) }
+
+  let(:slug_generator) { Hanami::Container['util.slug_generator'] }
 
   context 'when args is nil' do
     let(:args) { nil }
@@ -38,7 +38,7 @@ RSpec.describe Util::SlugGenerator do
   end
 
   context 'when args many elements' do
-    let(:args) { ['hElLo', 'world', 'agAin'] }
+    let(:args) { %w[hElLo world agAin] }
 
     it 'returns downcased string separated by dashes' do
       is_expected.to eq('hello-world-again')
