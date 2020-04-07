@@ -26,6 +26,7 @@ Hanami.application.routes do
 
     resources :speakers, only: [:update]
     resources :events, only: [:update]
+    resources :tags, only: [:create]
 
     post '/login', to: 'sessions#create'
   end
