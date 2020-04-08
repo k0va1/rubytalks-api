@@ -1,0 +1,7 @@
+{
+  "id": "file:/admin_api/tags.json",
+  "type": "array",
+  "items": {
+    "$ref": "file:/admin_api/tag.json#"
+  }
+}

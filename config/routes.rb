@@ -26,7 +26,13 @@ Hanami.application.routes do
 
     resources :speakers, only: [:update]
     resources :events, only: [:update]
-
+    resources :tags, only: [:create] do
+      collection do
+        get :approved
+        get :unpublished
+        get :declined
+      end
+    end
     post '/login', to: 'sessions#create'
   end
 
