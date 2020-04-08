@@ -46,4 +46,17 @@ RSpec.describe Repositories::Tag do
       expect(subject.slug).to eq(args[:slug])
     end
   end
+
+  describe '#all_approved' do
+    subject { repo.all_approved }
+
+    let!(:tag1) { Factory[:tag, state: 'unpublished'] }
+    let!(:tag2) { Factory[:tag, state: 'approved'] }
+    let!(:tag3) { Factory[:tag, state: 'declined'] }
+    let!(:tag4) { Factory[:tag, state: 'unpublished'] }
+
+    it 'returns only unpublished tags' do
+      is_expected.to eq([tag2])
+    end
+  end
 end
