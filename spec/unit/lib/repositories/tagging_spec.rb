@@ -15,14 +15,14 @@ RSpec.describe Repositories::Tagging do
       let!(:tagging) { Factory[:taggings, talk_id: talk.id, tag_id: tag.id] }
 
       it 'returns existing tagging' do
-        expect{ subject }.to change{ repo.taggings.count }.by(0)
+        expect { subject }.to change { repo.taggings.count }.by(0)
         expect(subject.id).to eq(tagging.id)
       end
     end
 
     context 'when tagging does not exist' do
       it 'creates and returns new tagging' do
-        expect{ subject }.to change{ repo.taggings.count }.by(1)
+        expect { subject }.to change { repo.taggings.count }.by(1)
         expect(subject.tag_id).to eq(tag.id)
       end
     end

@@ -22,11 +22,11 @@ module Domains
 
           # TODO: return Success or Failure
           def call # rubocop:disable Metrics/AbcSize,Metrics/MethodLength
-            (1..total_pages).each do |page|
+            (1..total_pages).each do |page| # rubocop: disable Metrics/BlockLength
               html_page = get_parsed_page("#{CONFREAKS_URL}/?page=#{page}")
               ruby_events = select_ruby_events(html_page)
 
-              ruby_events.each do |ruby_event|
+              ruby_events.each do |ruby_event| # rubocop: disable Metrics/BlockLength
                 event_url = "#{CONFREAKS_URL}#{ruby_event.css('.event-img').css('/a').first.attr(:href)}"
                 event_page = get_parsed_page(event_url)
 

@@ -30,6 +30,7 @@ JsonMatchers.schema_root = 'spec/support/json_schemas'
 RSpec.configure do |config|
   config.include Dry::Monads::Result::Mixin
   config.include RequestHelpers, type: :request
+  config.include FixtureHelpers
   config.filter_run focus: true
   config.run_all_when_everything_filtered = true
   config.expect_with :rspec do |expectations|

@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
 RSpec.describe Parsers::Confreaks::TalkParser do
-  let(:event_body) { Nokogiri::HTML(File.open(File.join(Hanami.root, 'spec', 'support', 'fixtures', 'confreaks', 'event_body.txt'))) }
-  let(:talk_body) { Nokogiri::HTML(File.open(File.join(Hanami.root, 'spec', 'support', 'fixtures', 'confreaks', 'yt_talk_body.txt'))) }
+  subject { talk_parser.call }
+
+  let(:event_body) { Nokogiri::HTML(File.open(File.join(fixtures_path, 'confreaks', 'event_body.txt'))) }
+  let(:talk_body) { Nokogiri::HTML(File.open(File.join(fixtures_path, 'confreaks', 'yt_talk_body.txt'))) }
 
   let(:talk_parser) { described_class.new(event_body, talk_body) }
-
-  subject { talk_parser.call }
 
   it 'parses talk successfuly' do
     expect(subject[:title]).to eq('Ruby and Elixir')
