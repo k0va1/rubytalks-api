@@ -3,11 +3,16 @@
 module Parsers
   module Confreaks
     class SpeakerParser
+      include Import[
+        slug_generator: 'util.slug_generator'
+      ]
+
       attr_reader :speaker_block, :splitted_name
 
-      def initialize(speaker_block)
+      def initialize(speaker_block, *args)
         @speaker_block = speaker_block
         @splitted_name = speaker_block.text.strip.split
+        super(*args)
       end
 
       def call
@@ -34,7 +39,7 @@ module Parsers
       end
 
       def slug
-        [first_name, middle_name, last_name].join('-')
+        slug_generator.call(first_name, middle_name, last_name)
       end
 
       private
