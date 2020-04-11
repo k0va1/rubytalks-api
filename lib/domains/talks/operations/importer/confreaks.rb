@@ -12,7 +12,9 @@ module Domains
             talk_repo: 'repositories.talk',
             speaker_repo: 'repositories.speaker',
             event_repo: 'repositories.event',
-            talk_speaker_repo: 'repositories.talks_speaker',
+            speaking_repo: 'repositories.speaking',
+            tag_repo: 'repositories.tag',
+            tagging_repo: 'repositories.tagging'
           ]
 
           CONFREAKS_URL = 'https://confreaks.tv'
@@ -39,12 +41,19 @@ module Domains
                     Parsers::Confreaks::SpeakerParser.new(speaker_link).call
                   end
                   talk_hash = Parsers::Confreaks::TalkParser.new(talk_item, talk_page).call
+                  tags_list = talk_page.css('.video-bottom-info-middle').css('.tag').map do |tag|
+                    Parsers::Confreaks::TagParser.new(tag).call
+                  end
 
                   talk_repo.transaction do
                     talk = talk_repo.find_or_create(talk_hash.merge(event_id: event&.id))
-                    speaker_list.map do |speaker_hash|
+                    speaker_list.each do |speaker_hash|
                       speaker = speaker_repo.find_or_create(speaker_hash)
-                      talk_speaker_repo.find_or_create(speaker_id: speaker.id, talk_id: talk.id)
+                      speaking_repo.find_or_create(speaker_id: speaker.id, talk_id: talk.id)
+                    end
+                    tags_list.each do |tag_hash|
+                      tag = tag_repo.find_or_create(tag_hash)
+                      tagging_repo.find_or_create(tag_id: tag.id, talk_id: talk.id)
                     end
                   end
                 end
