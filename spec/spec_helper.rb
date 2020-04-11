@@ -21,13 +21,16 @@ Hanami::Utils.require!("#{__dir__}/support")
 
 require 'support/database_cleaner'
 require 'json_matchers/rspec'
+
 require 'webmock/rspec'
+WebMock.disable_net_connect!(allow_localhost: true)
 
 JsonMatchers.schema_root = 'spec/support/json_schemas'
 
 RSpec.configure do |config|
   config.include Dry::Monads::Result::Mixin
   config.include RequestHelpers, type: :request
+  config.include FixtureHelpers
   config.filter_run focus: true
   config.run_all_when_everything_filtered = true
   config.expect_with :rspec do |expectations|

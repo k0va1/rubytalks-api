@@ -11,7 +11,7 @@ module Domains
           speaker_repo: 'repositories.speaker',
           event_repo: 'repositories.event',
           speaking_repo: 'repositories.speaking',
-          slug_generator: 'domains.speakers.util.slug_generator'
+          slug_generator: 'util.slug_generator'
         ]
 
         def call(talk_form) # rubocop:disable Metrics/AbcSize
@@ -71,10 +71,7 @@ module Domains
         end
 
         def find_or_create_speaker(speaker_form)
-          slug = slug_generator.generate(
-            first_name: speaker_form[:first_name],
-            last_name: speaker_form[:last_name]
-          )
+          slug = slug_generator.call(speaker_form[:first_name], speaker_form[:last_name])
 
           speaker_form = speaker_form.transform_keys(&:to_sym).merge(
             state: 'unpublished',

@@ -7,6 +7,8 @@ module Parsers
 
       attr_reader :event_page, :talk_page
 
+      HASH_REGEX = %r{.*(?:video|embed)/([A-Za-z0-9\-_]+).*}.freeze
+
       def initialize(event_page, talk_page)
         @event_page = event_page
         @talk_page  = talk_page
@@ -40,10 +42,11 @@ module Parsers
       def link
         html_link = talk_page.css('iframe').first&.attr(:src)
 
+        hash = html_link.scan(HASH_REGEX).flatten.first
         if youtube_link?(html_link)
-          "https://www.youtube.com/watch?v=#{html_link.scan(%r{.*/([A-Za-z0-9\-_]+)\?.*}).flatten.first}"
+          "https://www.youtube.com/watch?v=#{hash}"
         elsif vimeo_link?(html_link)
-          "https://vimeo.com/#{html_link.scan(%r{.*/([A-Za-z0-9\-_]+)\?.*}).flatten.first}"
+          "https://vimeo.com/#{hash}"
         else
           raise UndefinedLinkProviderError, "Unprocessable link: #{html_link}"
         end
