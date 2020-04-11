@@ -11,6 +11,11 @@ module Repositories
       tags.changeset(Changesets::Tag::Create, args).commit
     end
 
+    def find_or_create(params)
+      tag = find_by_slug(params[:slug])
+      tag || create(params)
+    end
+
     def find_by_slug(slug)
       tags.where(slug: slug).one
     end
