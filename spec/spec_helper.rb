@@ -21,7 +21,9 @@ Hanami::Utils.require!("#{__dir__}/support")
 
 require 'support/database_cleaner'
 require 'json_matchers/rspec'
+
 require 'webmock/rspec'
+WebMock.disable_net_connect!(allow_localhost: true)
 
 JsonMatchers.schema_root = 'spec/support/json_schemas'
 
