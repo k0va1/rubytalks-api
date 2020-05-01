@@ -16,6 +16,7 @@
   - critical
   - default
   - <%= `hostname`.strip %>
+  - import
   - low
 
 # you can override concurrency based on environment
