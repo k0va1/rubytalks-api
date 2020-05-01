@@ -1,0 +1,221 @@
+{
+ "kind": "youtube#playlistListResponse",
+ "etag": "\"Dn5xIderbhAnUk5TAW0qkFFir0M/0pDsSgz9SPldZpXVT6UDitK61Vg\"",
+ "nextPageToken": "CAUQAA",
+ "pageInfo": {
+  "totalResults": 298,
+  "resultsPerPage": 5
+ },
+ "items": [
+  {
+   "kind": "youtube#playlist",
+   "etag": "\"Dn5xIderbhAnUk5TAW0qkFFir0M/2dfurkSscM8gffCdmUdCeOvR2_g\"",
+   "id": "PLE7tQUdRKcyYuXKEO7QgJj78Wt-RXSIYY",
+   "snippet": {
+    "publishedAt": "2020-03-30T05:23:03.000Z",
+    "channelId": "UCWnPjmqvljcafA0z2U1fwKQ",
+    "title": "DevOpsDays NYC 2020",
+    "description": "Devopsdays is a worldwide series of technical conferences covering topics of software development, IT infrastructure operations, and the intersection between them. Each event is run by volunteers from the local area.\n\nMost devopsdays events feature a combination of curated talks (see open Calls for Proposals) and self organized open space content. Topics often include automation, testing, security, and organizational culture.",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/e8vmB2c8xo8/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/e8vmB2c8xo8/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/e8vmB2c8xo8/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/e8vmB2c8xo8/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/e8vmB2c8xo8/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "Confreaks",
+    "localized": {
+     "title": "DevOpsDays NYC 2020",
+     "description": "Devopsdays is a worldwide series of technical conferences covering topics of software development, IT infrastructure operations, and the intersection between them. Each event is run by volunteers from the local area.\n\nMost devopsdays events feature a combination of curated talks (see open Calls for Proposals) and self organized open space content. Topics often include automation, testing, security, and organizational culture."
+    }
+   }
+  },
+  {
+   "kind": "youtube#playlist",
+   "etag": "\"Dn5xIderbhAnUk5TAW0qkFFir0M/V4H09QZktSAKBkULgfwN-3b28qI\"",
+   "id": "PLE7tQUdRKcyZ0y2DLoi_2WHcHO5gATyMx",
+   "snippet": {
+    "publishedAt": "2020-03-26T19:16:40.000Z",
+    "channelId": "UCWnPjmqvljcafA0z2U1fwKQ",
+    "title": "EmberConf 2020",
+    "description": "EmberConf is the best place to meet the folks behind the magic.\n\nYou’ll hear from members of the Ember Core Team, top community contributors and users, and help shape the future of Ember.",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/vUojP8DDPs0/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/vUojP8DDPs0/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/vUojP8DDPs0/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/vUojP8DDPs0/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/vUojP8DDPs0/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "Confreaks",
+    "localized": {
+     "title": "EmberConf 2020",
+     "description": "EmberConf is the best place to meet the folks behind the magic.\n\nYou’ll hear from members of the Ember Core Team, top community contributors and users, and help shape the future of Ember."
+    }
+   }
+  },
+  {
+   "kind": "youtube#playlist",
+   "etag": "\"Dn5xIderbhAnUk5TAW0qkFFir0M/O8AfgItTPk7gPoG-yWGRl9kbQTU\"",
+   "id": "PLE7tQUdRKcyYgBUkXZl3SPMvHmywTGvwk",
+   "snippet": {
+    "publishedAt": "2020-03-23T15:55:18.000Z",
+    "channelId": "UCWnPjmqvljcafA0z2U1fwKQ",
+    "title": "!!Con West 2020",
+    "description": "",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/kzIeEo6JM1w/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/kzIeEo6JM1w/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/kzIeEo6JM1w/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/kzIeEo6JM1w/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/kzIeEo6JM1w/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "Confreaks",
+    "localized": {
+     "title": "!!Con West 2020",
+     "description": ""
+    }
+   }
+  },
+  {
+   "kind": "youtube#playlist",
+   "etag": "\"Dn5xIderbhAnUk5TAW0qkFFir0M/3NfD3aYKqTKE2qmrirkB-IVZ6gM\"",
+   "id": "PLE7tQUdRKcyYC2lZzwTvEeJXghm4Ym4ZX",
+   "snippet": {
+    "publishedAt": "2020-02-19T17:28:42.000Z",
+    "channelId": "UCWnPjmqvljcafA0z2U1fwKQ",
+    "title": "Birmingham on Rails 2020",
+    "description": "Birmingham on Rails 2020!",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/EypRSLfKvak/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/EypRSLfKvak/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/EypRSLfKvak/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/EypRSLfKvak/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/EypRSLfKvak/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "Confreaks",
+    "localized": {
+     "title": "Birmingham on Rails 2020",
+     "description": "Birmingham on Rails 2020!"
+    }
+   }
+  },
+  {
+   "kind": "youtube#playlist",
+   "etag": "\"Dn5xIderbhAnUk5TAW0qkFFir0M/6JnYVRS-3EgxKPve1EXy_Yh_QfY\"",
+   "id": "PLE7tQUdRKcyadeTFH6784Vclvaco-HCIB",
+   "snippet": {
+    "publishedAt": "2020-01-29T17:58:32.000Z",
+    "channelId": "UCWnPjmqvljcafA0z2U1fwKQ",
+    "title": "MWRC 2007",
+    "description": "",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/DvRSLUktog4/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/DvRSLUktog4/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/DvRSLUktog4/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/DvRSLUktog4/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     }
+    },
+    "channelTitle": "Confreaks",
+    "localized": {
+     "title": "MWRC 2007",
+     "description": ""
+    }
+   }
+  }
+ ]
+}

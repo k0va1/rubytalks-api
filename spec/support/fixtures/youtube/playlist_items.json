@@ -1,0 +1,1431 @@
+{
+ "kind": "youtube#playlistItemListResponse",
+ "etag": "\"tnVOtk4NeGU6nDncDTE5m9SmuHc/fgnGBkhwYfjTX_M5VAVegtCjUiI\"",
+ "pageInfo": {
+  "totalResults": 29,
+  "resultsPerPage": 50
+ },
+ "items": [
+  {
+   "kind": "youtube#playlistItem",
+   "etag": "\"tnVOtk4NeGU6nDncDTE5m9SmuHc/rJxIQP04-hMxzKPiVQfdbBd6EEU\"",
+   "id": "UExFN3RRVWRSS2N5WWdCVWtYWmwzU1BNdkhteXdUR3Z3ay41NkI0NEY2RDEwNTU3Q0M2",
+   "snippet": {
+    "publishedAt": "2020-03-23T15:55:18.000Z",
+    "channelId": "UCWnPjmqvljcafA0z2U1fwKQ",
+    "title": "!!Con West 2020 - Opening remarks",
+    "description": "Why are we having this conference?  And especially in these particularly dark days, why are we having a conference at all?  Some words about our code of conduct, and some words from Sohum Banerjea, who is a graduate student worker who was fired from UC Santa Cruz just a few hours before we started setup on Friday -- and, finally some answers as to why we find !!Con so important.\n\n#bangbangcon #bangbangconwest #bangbangconwest2020",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/kzIeEo6JM1w/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/kzIeEo6JM1w/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/kzIeEo6JM1w/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/kzIeEo6JM1w/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/kzIeEo6JM1w/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "Confreaks",
+    "playlistId": "PLE7tQUdRKcyYgBUkXZl3SPMvHmywTGvwk",
+    "position": 0,
+    "resourceId": {
+     "kind": "youtube#video",
+     "videoId": "kzIeEo6JM1w"
+    }
+   },
+   "contentDetails": {
+    "videoId": "kzIeEo6JM1w",
+    "videoPublishedAt": "2020-03-20T18:55:34.000Z"
+   }
+  },
+  {
+   "kind": "youtube#playlistItem",
+   "etag": "\"tnVOtk4NeGU6nDncDTE5m9SmuHc/I7qNAlvdEFGYyRRYjUGOVWD-gcY\"",
+   "id": "UExFN3RRVWRSS2N5WWdCVWtYWmwzU1BNdkhteXdUR3Z3ay4yODlGNEE0NkRGMEEzMEQy",
+   "snippet": {
+    "publishedAt": "2020-03-23T15:55:26.000Z",
+    "channelId": "UCWnPjmqvljcafA0z2U1fwKQ",
+    "title": "!!Con West 2020 - isis agora lovecruft: big number small computer",
+    "description": "Presented at !!Con West 2020: http://bangbangcon.com/west\n\nisis agora lovecruft's keynote, big number small computer!\n\n#bangbangcon #bangbangconwest #bangbangconwest2020",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/hyT6VM7_byE/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/hyT6VM7_byE/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/hyT6VM7_byE/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/hyT6VM7_byE/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/hyT6VM7_byE/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "Confreaks",
+    "playlistId": "PLE7tQUdRKcyYgBUkXZl3SPMvHmywTGvwk",
+    "position": 1,
+    "resourceId": {
+     "kind": "youtube#video",
+     "videoId": "hyT6VM7_byE"
+    }
+   },
+   "contentDetails": {
+    "videoId": "hyT6VM7_byE",
+    "videoPublishedAt": "2020-03-20T18:52:06.000Z"
+   }
+  },
+  {
+   "kind": "youtube#playlistItem",
+   "etag": "\"tnVOtk4NeGU6nDncDTE5m9SmuHc/ykZ1nlH9l06gQukb_enCBUBj-Bo\"",
+   "id": "UExFN3RRVWRSS2N5WWdCVWtYWmwzU1BNdkhteXdUR3Z3ay4wMTcyMDhGQUE4NTIzM0Y5",
+   "snippet": {
+    "publishedAt": "2020-03-23T15:55:37.000Z",
+    "channelId": "UCWnPjmqvljcafA0z2U1fwKQ",
+    "title": "!!Con West 2020 - Katie Broida: You can weave software into hardware! And then fly to the moon!!",
+    "description": "Presented at !!Con West 2020: http://bangbangcon.com/west\n\nIn the 1960s when astronauts flew to the moon, they used cutting-edge technology: read-only memory that highly trained women wove together from hair-thin wires and iron cores. These hardcoded programs, called core rope memory, sat at the intersection of hardware and software, digital and analog. It was so resilient, it survived when Apollo 12 was struck mid-air by lightning and rebooted flawlessly. Come learn about how this hard software was made, who created it, and how it got humankind to the moon!\n\n#bangbangcon #bangbangconwest #bangbangconwest2020",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/xnccFajPPqo/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/xnccFajPPqo/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/xnccFajPPqo/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/xnccFajPPqo/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/xnccFajPPqo/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "Confreaks",
+    "playlistId": "PLE7tQUdRKcyYgBUkXZl3SPMvHmywTGvwk",
+    "position": 2,
+    "resourceId": {
+     "kind": "youtube#video",
+     "videoId": "xnccFajPPqo"
+    }
+   },
+   "contentDetails": {
+    "videoId": "xnccFajPPqo",
+    "videoPublishedAt": "2020-03-20T18:55:40.000Z"
+   }
+  },
+  {
+   "kind": "youtube#playlistItem",
+   "etag": "\"tnVOtk4NeGU6nDncDTE5m9SmuHc/Tjznp2goWZCIx6iGoin1wASxRIQ\"",
+   "id": "UExFN3RRVWRSS2N5WWdCVWtYWmwzU1BNdkhteXdUR3Z3ay41MjE1MkI0OTQ2QzJGNzNG",
+   "snippet": {
+    "publishedAt": "2020-03-23T15:55:44.000Z",
+    "channelId": "UCWnPjmqvljcafA0z2U1fwKQ",
+    "title": "!!Con West 2020 - Breanne Boland: You can put WHAT in DNS TXT records?!?!",
+    "description": "Presented at !!Con West 2020: http://bangbangcon.com/west\n\nDNS TXT resource records have several more common uses: SPF records, contact information, randomized strings put in place so hosting services can verify that someone does indeed control a domain. But the spec for them in RFC 1035 is pretty short: “TXT RRs are used to hold descriptive text. The semantics of the text depends on the domain where it is found.” And Corey Quinn calls Route 53, the AWS DNS service, his favorite database, because it has a 100% SLA. There’s room for a LOT of mischief in between those two descriptions. This talk will give a brief explanation of DNS and its record types, discuss the officially endorsed uses of TXT records… and then look into what kind of fun someone can have with the more off-brand uses (like thwarting attempts at internet censorship!).\n\n#bangbangcon #bangbangconwest #bangbangconwest2020",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/15kNl-qPmf0/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/15kNl-qPmf0/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/15kNl-qPmf0/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/15kNl-qPmf0/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/15kNl-qPmf0/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "Confreaks",
+    "playlistId": "PLE7tQUdRKcyYgBUkXZl3SPMvHmywTGvwk",
+    "position": 3,
+    "resourceId": {
+     "kind": "youtube#video",
+     "videoId": "15kNl-qPmf0"
+    }
+   },
+   "contentDetails": {
+    "videoId": "15kNl-qPmf0",
+    "videoPublishedAt": "2020-03-20T18:51:56.000Z"
+   }
+  },
+  {
+   "kind": "youtube#playlistItem",
+   "etag": "\"tnVOtk4NeGU6nDncDTE5m9SmuHc/NoiCDfDqR6ChHmqZ4JAF7DNYoYU\"",
+   "id": "UExFN3RRVWRSS2N5WWdCVWtYWmwzU1BNdkhteXdUR3Z3ay4wOTA3OTZBNzVEMTUzOTMy",
+   "snippet": {
+    "publishedAt": "2020-03-23T15:55:58.000Z",
+    "channelId": "UCWnPjmqvljcafA0z2U1fwKQ",
+    "title": "!!Con West 2020 - Jason Orendorff: Wolf, Goat, and Cabbage In Two Styles!!",
+    "description": "Presented at !!Con West 2020: http://bangbangcon.com/west\n\nConsider two programming languages, both delightfully strange, but for good reasons. What if comparing them sheds light on how different programming languages enable thinking about time and data?\n\nInform 7 is an unusual programming language that looks a bit like English prose. Alloy is a model specification language that looks kind of like advanced math. They are languages from two different worlds, but both are about objects and their relationships. Both come with interesting visualization tools. And both have some issues dealing with change. In this talk, we’ll implement an ancient puzzle in both languages, explore their unique charms, and reflect on whether it’s possible to step into the same river twice.\n\n#bangbangcon #bangbangconwest #bangbangconwest2020",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/KyAHtqi3PUY/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/KyAHtqi3PUY/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/KyAHtqi3PUY/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/KyAHtqi3PUY/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/KyAHtqi3PUY/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "Confreaks",
+    "playlistId": "PLE7tQUdRKcyYgBUkXZl3SPMvHmywTGvwk",
+    "position": 4,
+    "resourceId": {
+     "kind": "youtube#video",
+     "videoId": "KyAHtqi3PUY"
+    }
+   },
+   "contentDetails": {
+    "videoId": "KyAHtqi3PUY",
+    "videoPublishedAt": "2020-03-20T18:52:08.000Z"
+   }
+  },
+  {
+   "kind": "youtube#playlistItem",
+   "etag": "\"tnVOtk4NeGU6nDncDTE5m9SmuHc/OZko3CXuZr0ryR5v1tYNAJzzVS8\"",
+   "id": "UExFN3RRVWRSS2N5WWdCVWtYWmwzU1BNdkhteXdUR3Z3ay4xMkVGQjNCMUM1N0RFNEUx",
+   "snippet": {
+    "publishedAt": "2020-03-23T15:56:04.000Z",
+    "channelId": "UCWnPjmqvljcafA0z2U1fwKQ",
+    "title": "!!Con West 2020 - Aaron Wood: The Ancient Greeks and Their Restless Cattle: 2300 years of Bigints!",
+    "description": "Presented at !!Con West 2020: http://bangbangcon.com/west\n\nPreviously on The Ancient and the Restless: Archimedes’ new BigNumeral class is the talk of the town, but his biggest rival is out to destroy and replace it. Not to be outdone, Archimedes poses a cattle-counting problem to cement his place at the top. As planned, the challenge proves insurmountable and interest in the problem eventually dies.\n\n….Or does it?? In true soap opera fashion, the long-forgotten problem has reappeared with a vengeance. Will two millennia of maths and the advent of computers be enough to answer Archimedes’ challenge to find the number of Cattle Under The Sun?!\n\n#bangbangcon #bangbangconwest #bangbangconwest2020",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/BVYotbZuiDY/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/BVYotbZuiDY/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/BVYotbZuiDY/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/BVYotbZuiDY/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/BVYotbZuiDY/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "Confreaks",
+    "playlistId": "PLE7tQUdRKcyYgBUkXZl3SPMvHmywTGvwk",
+    "position": 5,
+    "resourceId": {
+     "kind": "youtube#video",
+     "videoId": "BVYotbZuiDY"
+    }
+   },
+   "contentDetails": {
+    "videoId": "BVYotbZuiDY",
+    "videoPublishedAt": "2020-03-20T18:55:45.000Z"
+   }
+  },
+  {
+   "kind": "youtube#playlistItem",
+   "etag": "\"tnVOtk4NeGU6nDncDTE5m9SmuHc/01Y0d-yYlzaGtHALELHCF2pu1rM\"",
+   "id": "UExFN3RRVWRSS2N5WWdCVWtYWmwzU1BNdkhteXdUR3Z3ay41MzJCQjBCNDIyRkJDN0VD",
+   "snippet": {
+    "publishedAt": "2020-03-23T15:56:13.000Z",
+    "channelId": "UCWnPjmqvljcafA0z2U1fwKQ",
+    "title": "!!Con West 2020 - Michelle Brenner: How To Host A Podcast For 25 Cents A Month!",
+    "description": "Presented at !!Con West 2020: http://bangbangcon.com/west\n\nWant to host a podcast, but don’t know where to start? I have answers!! Last year I launched From The Source, where I interview unsung people in tech with amazing stories. Hosting involves three major components: an XML file with episode details, mp3 storage, and metrics on your listeners. In this talk, I’ll go over all the AWS tools and Python scripts I used so I could own my data and not incur hefty hosting fees.\n\nDuring this talk, I will be creating a fresh podcast from scratch, with only a few pre-prepared items like any good cooking show. Together we’ll upload the MP3 file to S3 and then create an XML file and upload that as well. You can then pull the feed onto your phone using any podcast app and download the episode. After we download the episode, we can parse the S3 logs using Athena to see who has been listening. And finally, I’ll show you a bonus script that helps with the worst part of hosting a podcast: editing.\n\nAt the end of the talk, all you’ll need to worry about is which story you want to tell on your own podcast.\n\n#bangbangcon #bangbangconwest #bangbangconwest2020",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/tKoqtCzGZWM/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/tKoqtCzGZWM/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/tKoqtCzGZWM/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/tKoqtCzGZWM/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/tKoqtCzGZWM/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "Confreaks",
+    "playlistId": "PLE7tQUdRKcyYgBUkXZl3SPMvHmywTGvwk",
+    "position": 6,
+    "resourceId": {
+     "kind": "youtube#video",
+     "videoId": "tKoqtCzGZWM"
+    }
+   },
+   "contentDetails": {
+    "videoId": "tKoqtCzGZWM",
+    "videoPublishedAt": "2020-03-20T18:52:06.000Z"
+   }
+  },
+  {
+   "kind": "youtube#playlistItem",
+   "etag": "\"tnVOtk4NeGU6nDncDTE5m9SmuHc/kL0mK2j2DqvrMxPPUmMedaNg6Ss\"",
+   "id": "UExFN3RRVWRSS2N5WWdCVWtYWmwzU1BNdkhteXdUR3Z3ay5DQUNERDQ2NkIzRUQxNTY1",
+   "snippet": {
+    "publishedAt": "2020-03-23T15:56:25.000Z",
+    "channelId": "UCWnPjmqvljcafA0z2U1fwKQ",
+    "title": "!!Con West 2020 - Vaibhav Sagar: Compilers for nothing, executables for free!",
+    "description": "Presented at !!Con West 2020: http://bangbangcon.com/west\n\nI’m going to talk about a less commonly known, but surprisingly useful, class of programs known as specialisers, and what you can do with them! I will also discuss the Futamura projections, which are mind-bending applications of this idea that have recently become practically useful!\n\n#bangbangcon #bangbangconwest #bangbangconwest2020",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/tylozRo9_hU/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/tylozRo9_hU/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/tylozRo9_hU/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/tylozRo9_hU/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/tylozRo9_hU/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "Confreaks",
+    "playlistId": "PLE7tQUdRKcyYgBUkXZl3SPMvHmywTGvwk",
+    "position": 7,
+    "resourceId": {
+     "kind": "youtube#video",
+     "videoId": "tylozRo9_hU"
+    }
+   },
+   "contentDetails": {
+    "videoId": "tylozRo9_hU",
+    "videoPublishedAt": "2020-03-20T18:53:07.000Z"
+   }
+  },
+  {
+   "kind": "youtube#playlistItem",
+   "etag": "\"tnVOtk4NeGU6nDncDTE5m9SmuHc/IAJtm4lbb_OvgWUEDrsuYlMSOuA\"",
+   "id": "UExFN3RRVWRSS2N5WWdCVWtYWmwzU1BNdkhteXdUR3Z3ay45NDk1REZENzhEMzU5MDQz",
+   "snippet": {
+    "publishedAt": "2020-03-23T15:56:30.000Z",
+    "channelId": "UCWnPjmqvljcafA0z2U1fwKQ",
+    "title": "!!Con West 2020: Nick Fitzgerald - Writing Programs! That Write Other Programs!!",
+    "description": "Presented at !!Con West 2020: http://bangbangcon.com/west\n\nWhy write programs when you can write a program to write programs for you? And that program writes programs that are faster than the programs you’d write by hand. And that program’s programs are actually, you know, correct. Wow!\n\nYep, it’s time to synthesize. But this ain’t Moog, this is program synthesis. What is that, and how can it upgrade our optimizers into super-optimizers? We’ll find out!!\n\n#bangbangcon #bangbangconwest #bangbangconwest2020",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/kR6rkVwQPos/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/kR6rkVwQPos/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/kR6rkVwQPos/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/kR6rkVwQPos/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/kR6rkVwQPos/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "Confreaks",
+    "playlistId": "PLE7tQUdRKcyYgBUkXZl3SPMvHmywTGvwk",
+    "position": 8,
+    "resourceId": {
+     "kind": "youtube#video",
+     "videoId": "kR6rkVwQPos"
+    }
+   },
+   "contentDetails": {
+    "videoId": "kR6rkVwQPos",
+    "videoPublishedAt": "2020-03-20T18:55:58.000Z"
+   }
+  },
+  {
+   "kind": "youtube#playlistItem",
+   "etag": "\"tnVOtk4NeGU6nDncDTE5m9SmuHc/qFvbzQgMyTB11IrSs6z_yUqsdQk\"",
+   "id": "UExFN3RRVWRSS2N5WWdCVWtYWmwzU1BNdkhteXdUR3Z3ay5GNjNDRDREMDQxOThCMDQ2",
+   "snippet": {
+    "publishedAt": "2020-03-23T15:56:37.000Z",
+    "channelId": "UCWnPjmqvljcafA0z2U1fwKQ",
+    "title": "!!Con West 2020 - Wesley Aptekar-Cassels: Plotty Bird: Making Modern Games on Retro Pen Plotters!",
+    "description": "Presented at !!Con West 2020: http://bangbangcon.com/west\n\nIf you wanted to print a diagram on a piece of paper in the 60s, a pen plotter was the way to do it – a device that would take a pen and physically move it over a piece of paper to produce a diagram. While printers are clearly a better way to print images now, there’s still joy in watching a robot scratch out perfect lines on a blank sheet of paper. When I happened across a vintage pen plotter from the mid-80s, I had great fun making all sorts of art and pretty pictures. But I wondered – could I do more with this? How can we stretch this medium into something new and surprising? Using it as an output device for playing games seemed too good an idea to resist.\n\n#bangbangcon #bangbangconwest #bangbangconwest2020",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/tMO3Vg5zAew/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/tMO3Vg5zAew/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/tMO3Vg5zAew/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/tMO3Vg5zAew/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/tMO3Vg5zAew/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "Confreaks",
+    "playlistId": "PLE7tQUdRKcyYgBUkXZl3SPMvHmywTGvwk",
+    "position": 9,
+    "resourceId": {
+     "kind": "youtube#video",
+     "videoId": "tMO3Vg5zAew"
+    }
+   },
+   "contentDetails": {
+    "videoId": "tMO3Vg5zAew",
+    "videoPublishedAt": "2020-03-20T18:51:56.000Z"
+   }
+  },
+  {
+   "kind": "youtube#playlistItem",
+   "etag": "\"tnVOtk4NeGU6nDncDTE5m9SmuHc/kAWOQv-2IwxgBxX4XBg-GqK__rU\"",
+   "id": "UExFN3RRVWRSS2N5WWdCVWtYWmwzU1BNdkhteXdUR3Z3ay40NzZCMERDMjVEN0RFRThB",
+   "snippet": {
+    "publishedAt": "2020-03-23T15:56:44.000Z",
+    "channelId": "UCWnPjmqvljcafA0z2U1fwKQ",
+    "title": "!!Con West 2020 - Spencer Alves: Reverse engineering game formats for fun and profit! (or just fun)",
+    "description": "Presented at !!Con West 2020: http://bangbangcon.com/west\n\nVideo games can be cool, right? You know what’s cooler? A hex editor!\n\nFor a while I’ve made a hobby of figuring out how games store their data, and converting it to and from other formats. I’m far from the only one to do that, but I want to share what I have learned so that you don’t have to start from scratch: things like how a hex editor works, what floating point looks like, file structures and layout, and more general reversing strategies.\n\n#bangbangcon #bangbangconwest #bangbangconwest2020",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/MXbo6y6MCPE/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/MXbo6y6MCPE/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/MXbo6y6MCPE/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/MXbo6y6MCPE/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/MXbo6y6MCPE/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "Confreaks",
+    "playlistId": "PLE7tQUdRKcyYgBUkXZl3SPMvHmywTGvwk",
+    "position": 10,
+    "resourceId": {
+     "kind": "youtube#video",
+     "videoId": "MXbo6y6MCPE"
+    }
+   },
+   "contentDetails": {
+    "videoId": "MXbo6y6MCPE",
+    "videoPublishedAt": "2020-03-20T18:52:06.000Z"
+   }
+  },
+  {
+   "kind": "youtube#playlistItem",
+   "etag": "\"tnVOtk4NeGU6nDncDTE5m9SmuHc/pZQMvZoY17HB5WpHbyU_fJV8WUg\"",
+   "id": "UExFN3RRVWRSS2N5WWdCVWtYWmwzU1BNdkhteXdUR3Z3ay5EMEEwRUY5M0RDRTU3NDJC",
+   "snippet": {
+    "publishedAt": "2020-03-23T15:56:50.000Z",
+    "channelId": "UCWnPjmqvljcafA0z2U1fwKQ",
+    "title": "!!Con West 2020 - Lito Nicolai: ba-ding!",
+    "description": "Presented at !!Con West 2020: http://bangbangcon.com/west\n\nThis is a talk about what happens when you turn on a Nintendo Game Boy, see the logo scroll down the screen, and hear the *ba-ding!* sound. It’s about why it happens, and how we know what happens. It involves a clever and litigious company, trademark law, a microscope, nitric acid, and a very dedicated materials science student.\n\n#bangbangcon #bangbangconwest #bangbangconwest2020",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/RkABpp-YL1I/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/RkABpp-YL1I/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/RkABpp-YL1I/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/RkABpp-YL1I/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/RkABpp-YL1I/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "Confreaks",
+    "playlistId": "PLE7tQUdRKcyYgBUkXZl3SPMvHmywTGvwk",
+    "position": 11,
+    "resourceId": {
+     "kind": "youtube#video",
+     "videoId": "RkABpp-YL1I"
+    }
+   },
+   "contentDetails": {
+    "videoId": "RkABpp-YL1I",
+    "videoPublishedAt": "2020-03-20T18:51:56.000Z"
+   }
+  },
+  {
+   "kind": "youtube#playlistItem",
+   "etag": "\"tnVOtk4NeGU6nDncDTE5m9SmuHc/tDV768UGUCjdLtFQHjxw7eR839o\"",
+   "id": "UExFN3RRVWRSS2N5WWdCVWtYWmwzU1BNdkhteXdUR3Z3ay45ODRDNTg0QjA4NkFBNkQy",
+   "snippet": {
+    "publishedAt": "2020-03-23T15:56:56.000Z",
+    "channelId": "UCWnPjmqvljcafA0z2U1fwKQ",
+    "title": "!!Con West 2020 - don-E Merson: Sonification: You Can See Your Complex Data with Sound!!",
+    "description": "Presented at !!Con West 2020: http://bangbangcon.com/west\n\nSonification is using sound to map data. While visualization techniques are limited to a few dimensions, the use of sound and sight at the same time allows the user to comprehend more dimensions simultaneously. This talk will explain some new ideas about using sound in concert with sight to envision data in a new way.\n\n#bangbangcon #bangbangconwest #bangbangconwest2020",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/GbCL7k5K3BI/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/GbCL7k5K3BI/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/GbCL7k5K3BI/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/GbCL7k5K3BI/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/GbCL7k5K3BI/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "Confreaks",
+    "playlistId": "PLE7tQUdRKcyYgBUkXZl3SPMvHmywTGvwk",
+    "position": 12,
+    "resourceId": {
+     "kind": "youtube#video",
+     "videoId": "GbCL7k5K3BI"
+    }
+   },
+   "contentDetails": {
+    "videoId": "GbCL7k5K3BI",
+    "videoPublishedAt": "2020-03-20T18:52:06.000Z"
+   }
+  },
+  {
+   "kind": "youtube#playlistItem",
+   "etag": "\"tnVOtk4NeGU6nDncDTE5m9SmuHc/bqc75DdkKTfdMPrku5uDD357NI4\"",
+   "id": "UExFN3RRVWRSS2N5WWdCVWtYWmwzU1BNdkhteXdUR3Z3ay4zMDg5MkQ5MEVDMEM1NTg2",
+   "snippet": {
+    "publishedAt": "2020-03-23T15:57:03.000Z",
+    "channelId": "UCWnPjmqvljcafA0z2U1fwKQ",
+    "title": "!!Con West 2020 - Phil Warren: Beyond the Black Rainbow: Using Booleans to Photograph IR Rainbows!",
+    "description": "Presented at !!Con West 2020: http://bangbangcon.com/west\n\nWhy are there so many talks about rainbows? And what’s on the other side? Rainbows are visions, but not illusions, and rainbows have something to hide!\n\nFrustratingly, infrared photographers find that they can never photograph the invisible extra stripes beyond red in a rainbow. Instead, they’ll only see a single monochromatic band! We will explore why, and dive into the boolean solution to make a three-channel model that reveals a full -olor unseen world! Then, we’ll look at pictures of a world entirely in a spectrum we can’t see!\n\n#bangbangcon #bangbangconwest #bangbangconwest2020",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/EB06NHlXiow/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/EB06NHlXiow/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/EB06NHlXiow/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/EB06NHlXiow/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/EB06NHlXiow/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "Confreaks",
+    "playlistId": "PLE7tQUdRKcyYgBUkXZl3SPMvHmywTGvwk",
+    "position": 13,
+    "resourceId": {
+     "kind": "youtube#video",
+     "videoId": "EB06NHlXiow"
+    }
+   },
+   "contentDetails": {
+    "videoId": "EB06NHlXiow",
+    "videoPublishedAt": "2020-03-20T18:52:06.000Z"
+   }
+  },
+  {
+   "kind": "youtube#playlistItem",
+   "etag": "\"tnVOtk4NeGU6nDncDTE5m9SmuHc/aeh2whtTlMK7rQMyDtNMh7cG9D0\"",
+   "id": "UExFN3RRVWRSS2N5WWdCVWtYWmwzU1BNdkhteXdUR3Z3ay41Mzk2QTAxMTkzNDk4MDhF",
+   "snippet": {
+    "publishedAt": "2020-03-23T15:57:09.000Z",
+    "channelId": "UCWnPjmqvljcafA0z2U1fwKQ",
+    "title": "!!Con West 2020 - Jeremy Apthorp: Curses!!",
+    "description": "Presented at !!Con West 2020: http://bangbangcon.com/west\n\nOkay, so you’ve probably called print() and seen some text appear in a terminal. Cool cool cool. But some programs print COLORS??? And move the cursor around and stuff? How in the heck does all that work?\n\nI got curious and went digging, and to really answer this we need to go back to 1835 and the first application of electrical engineering.\n\n#bangbangcon #bangbangconwest #bangbangconwest2020",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/dGs7vDeGS7U/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/dGs7vDeGS7U/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/dGs7vDeGS7U/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/dGs7vDeGS7U/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/dGs7vDeGS7U/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "Confreaks",
+    "playlistId": "PLE7tQUdRKcyYgBUkXZl3SPMvHmywTGvwk",
+    "position": 14,
+    "resourceId": {
+     "kind": "youtube#video",
+     "videoId": "dGs7vDeGS7U"
+    }
+   },
+   "contentDetails": {
+    "videoId": "dGs7vDeGS7U",
+    "videoPublishedAt": "2020-03-20T18:55:49.000Z"
+   }
+  },
+  {
+   "kind": "youtube#playlistItem",
+   "etag": "\"tnVOtk4NeGU6nDncDTE5m9SmuHc/W-ojzUtXgTIfA3bEf2BRj3NMdgw\"",
+   "id": "UExFN3RRVWRSS2N5WWdCVWtYWmwzU1BNdkhteXdUR3Z3ay5EQUE1NTFDRjcwMDg0NEMz",
+   "snippet": {
+    "publishedAt": "2020-03-23T15:57:17.000Z",
+    "channelId": "UCWnPjmqvljcafA0z2U1fwKQ",
+    "title": "!!Con West 2020 - Opening Remarks, day 2",
+    "description": "Presented at !!Con West 2020: http://bangbangcon.com/west\n\nA few words about the Exclamation Foundation!\n\n#bangbangcon #bangbangconwest #bangbangconwest2020",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/wOKlzFJ0FBg/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/wOKlzFJ0FBg/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/wOKlzFJ0FBg/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/wOKlzFJ0FBg/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/wOKlzFJ0FBg/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "Confreaks",
+    "playlistId": "PLE7tQUdRKcyYgBUkXZl3SPMvHmywTGvwk",
+    "position": 15,
+    "resourceId": {
+     "kind": "youtube#video",
+     "videoId": "wOKlzFJ0FBg"
+    }
+   },
+   "contentDetails": {
+    "videoId": "wOKlzFJ0FBg",
+    "videoPublishedAt": "2020-03-20T18:52:07.000Z"
+   }
+  },
+  {
+   "kind": "youtube#playlistItem",
+   "etag": "\"tnVOtk4NeGU6nDncDTE5m9SmuHc/cUh_4AVfWT02lnYxVaOExq1-g9s\"",
+   "id": "UExFN3RRVWRSS2N5WWdCVWtYWmwzU1BNdkhteXdUR3Z3ay41QTY1Q0UxMTVCODczNThE",
+   "snippet": {
+    "publishedAt": "2020-03-23T15:57:22.000Z",
+    "channelId": "UCWnPjmqvljcafA0z2U1fwKQ",
+    "title": "!!Con West 2020 - Erin Rose Glass: def tech_liberation(): teaching agency in a programmed world!",
+    "description": "Presented at !!Con West 2020: http://bangbangcon.com/west\n\nErin Rose Glass's keynote, def tech_liberation(): teaching agency in a programmed world!\n\n#bangbangcon #bangbangconwest #bangbangconwest2020",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/hmFO5_llRLM/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/hmFO5_llRLM/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/hmFO5_llRLM/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/hmFO5_llRLM/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/hmFO5_llRLM/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "Confreaks",
+    "playlistId": "PLE7tQUdRKcyYgBUkXZl3SPMvHmywTGvwk",
+    "position": 16,
+    "resourceId": {
+     "kind": "youtube#video",
+     "videoId": "hmFO5_llRLM"
+    }
+   },
+   "contentDetails": {
+    "videoId": "hmFO5_llRLM",
+    "videoPublishedAt": "2020-03-20T18:55:54.000Z"
+   }
+  },
+  {
+   "kind": "youtube#playlistItem",
+   "etag": "\"tnVOtk4NeGU6nDncDTE5m9SmuHc/a4OIZQfHDhW-65vzgsiB2MxqN5g\"",
+   "id": "UExFN3RRVWRSS2N5WWdCVWtYWmwzU1BNdkhteXdUR3Z3ay4yMUQyQTQzMjRDNzMyQTMy",
+   "snippet": {
+    "publishedAt": "2020-03-23T15:57:30.000Z",
+    "channelId": "UCWnPjmqvljcafA0z2U1fwKQ",
+    "title": "!!Con West 2020 - Kathleen Tuite: The hacks behind my 3D reconstructed wedding cake topper!",
+    "description": "Presented at !!Con West 2020: http://bangbangcon.com/west\n\nThere is cool technology for capturing your likeness with a depth camera like a Kinect and fusing it into a single model. There are also neat ways of 3D printing those models in a bunch of different materials!\n\nAs a computer graphics/vision researcher, I thought it would be pretty straightforward to make a model of myself and my partner as a custom wedding cake topper. But time pressure and unfortunate artifacts meant I ALSO had to do some Javascript sleuthing, decode a proprietary 3D model format, and befriend my local makerspace to get it done!!\n\n#bangbangcon #bangbangconwest #bangbangconwest2020",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/08QmNfIvbCE/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/08QmNfIvbCE/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/08QmNfIvbCE/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/08QmNfIvbCE/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/08QmNfIvbCE/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "Confreaks",
+    "playlistId": "PLE7tQUdRKcyYgBUkXZl3SPMvHmywTGvwk",
+    "position": 17,
+    "resourceId": {
+     "kind": "youtube#video",
+     "videoId": "08QmNfIvbCE"
+    }
+   },
+   "contentDetails": {
+    "videoId": "08QmNfIvbCE",
+    "videoPublishedAt": "2020-03-20T18:56:24.000Z"
+   }
+  },
+  {
+   "kind": "youtube#playlistItem",
+   "etag": "\"tnVOtk4NeGU6nDncDTE5m9SmuHc/iZxRG_xBWzJ35LKclRZVEUjU0wc\"",
+   "id": "UExFN3RRVWRSS2N5WWdCVWtYWmwzU1BNdkhteXdUR3Z3ay45RTgxNDRBMzUwRjQ0MDhC",
+   "snippet": {
+    "publishedAt": "2020-03-23T15:57:37.000Z",
+    "channelId": "UCWnPjmqvljcafA0z2U1fwKQ",
+    "title": "!!Con West 2020 - Matías Lang: Delete all code! 100% testing coverage, the lazy way!",
+    "description": "Presented at !!Con West 2020: http://bangbangcon.com/west\n\nWhat do you do when your year-end bonus is directly related to the testing coverage of your project? Writing more tests, although expected, sounded pretty boring. Instead of that, I focused on writing a (totally useless) tool that deletes all untested branches on your code, therefore giving 100% coverage to your project, and not affecting its (tested) functionality!\n\nIn this talk, we’ll learn how to write code that uses AST manipulation to modify other pieces of code, and the problems of implementing this in Python. Also, we’ll discuss how an initially useless side project turned out to be not so useless.\n\n#bangbangcon #bangbangconwest #bangbangconwest2020",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/2bnlI3UpH-w/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/2bnlI3UpH-w/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/2bnlI3UpH-w/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/2bnlI3UpH-w/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/2bnlI3UpH-w/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "Confreaks",
+    "playlistId": "PLE7tQUdRKcyYgBUkXZl3SPMvHmywTGvwk",
+    "position": 18,
+    "resourceId": {
+     "kind": "youtube#video",
+     "videoId": "2bnlI3UpH-w"
+    }
+   },
+   "contentDetails": {
+    "videoId": "2bnlI3UpH-w",
+    "videoPublishedAt": "2020-03-20T18:56:20.000Z"
+   }
+  },
+  {
+   "kind": "youtube#playlistItem",
+   "etag": "\"tnVOtk4NeGU6nDncDTE5m9SmuHc/XQEHMhtP8JwoLcB-tjADltaxnJU\"",
+   "id": "UExFN3RRVWRSS2N5WWdCVWtYWmwzU1BNdkhteXdUR3Z3ay5ENDU4Q0M4RDExNzM1Mjcy",
+   "snippet": {
+    "publishedAt": "2020-03-23T15:57:45.000Z",
+    "channelId": "UCWnPjmqvljcafA0z2U1fwKQ",
+    "title": "!!Con West 2020 - Jordan Hendricks: Tex-Mex and malloc(3C): Restaurant Hosts and Memory Allocators!",
+    "description": "Presented at !!Con West 2020: http://bangbangcon.com/west\n\nBefore my life as a systems engineer, I worked for years as a hostess at an extremely popular Oklahoman Tex-Mex restaurant, whose wait list would routinely top 20-40 parties in length and 1-2 hour wait times. The host staff had a challenging task: seat waiting parties efficiently as other customers left, while keeping hangry customers happy and efficiency-obsessed managers off of our backs. Adding to our worries, the restaurant management would never turn a party away based on size, creating puzzles for the hosts: Where does one seat large parties – for instance, a group of 10 – when the largest table in the restaurant only holds 4 people? A clue: This problem looks a lot like the problems that memory allocators like malloc(3C) solve!\n\nIn this talk, I will explore some parallels between my job as a hostess, where I decided how to seat people given a set of restaurant tables and a wait list, and implementing a memory allocator, which chooses how to give out pieces of a larger region of memory to requesting programs. We will explore questions like: What does fragmentation look like in a restaurant? What are heuristics we can use to estimate when a table will be free? Do all relevant stakeholders – customers, managers, host staff, servers – equally benefit from the same allocation strategies?\n\n#bangbangcon #bangbangconwest #bangbangconwest2020",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/ML6gPvtH2Dg/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/ML6gPvtH2Dg/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/ML6gPvtH2Dg/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/ML6gPvtH2Dg/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/ML6gPvtH2Dg/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "Confreaks",
+    "playlistId": "PLE7tQUdRKcyYgBUkXZl3SPMvHmywTGvwk",
+    "position": 19,
+    "resourceId": {
+     "kind": "youtube#video",
+     "videoId": "ML6gPvtH2Dg"
+    }
+   },
+   "contentDetails": {
+    "videoId": "ML6gPvtH2Dg",
+    "videoPublishedAt": "2020-03-20T18:52:06.000Z"
+   }
+  },
+  {
+   "kind": "youtube#playlistItem",
+   "etag": "\"tnVOtk4NeGU6nDncDTE5m9SmuHc/mlrBqKswaC6c_8_YQr-DcZBt8Os\"",
+   "id": "UExFN3RRVWRSS2N5WWdCVWtYWmwzU1BNdkhteXdUR3Z3ay4yMDhBMkNBNjRDMjQxQTg1",
+   "snippet": {
+    "publishedAt": "2020-03-23T15:57:53.000Z",
+    "channelId": "UCWnPjmqvljcafA0z2U1fwKQ",
+    "title": "!!Con West 2020: Dr. Kate Compton - Of Muppets, Metaballs, and Ballroom Dance!",
+    "description": "Presented at !!Con West 2020: http://bangbangcon.com/west\n\nDr. Kate Compton's keynote, Of Muppets, Metaballs, and Ballroom Dance!\n\n#bangbangcon #bangbangconwest #bangbangconwest2020",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/iL0K_7AYqxQ/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/iL0K_7AYqxQ/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/iL0K_7AYqxQ/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/iL0K_7AYqxQ/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/iL0K_7AYqxQ/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "Confreaks",
+    "playlistId": "PLE7tQUdRKcyYgBUkXZl3SPMvHmywTGvwk",
+    "position": 20,
+    "resourceId": {
+     "kind": "youtube#video",
+     "videoId": "iL0K_7AYqxQ"
+    }
+   },
+   "contentDetails": {
+    "videoId": "iL0K_7AYqxQ",
+    "videoPublishedAt": "2020-03-20T18:56:13.000Z"
+   }
+  },
+  {
+   "kind": "youtube#playlistItem",
+   "etag": "\"tnVOtk4NeGU6nDncDTE5m9SmuHc/Z-hSDypipn4ZEUwL_Y74owyOAPU\"",
+   "id": "UExFN3RRVWRSS2N5WWdCVWtYWmwzU1BNdkhteXdUR3Z3ay5GM0Q3M0MzMzY5NTJFNTdE",
+   "snippet": {
+    "publishedAt": "2020-03-23T15:57:59.000Z",
+    "channelId": "UCWnPjmqvljcafA0z2U1fwKQ",
+    "title": "!!Con West 2020: Sarah Nguyen - linkRot!! Dancing the patterns of digital decay",
+    "description": "Presented at !!Con West 2020: http://bangbangcon.com/west\n\nThis is a dance inspired by broadcast audio through RSS, technology obsolescence, Git version controls, and 3-2-1 backups. Sounds recorded from earlier talks will be regenerated to create auditory memories of early digital networking and are made tangible through isolated limbed branches that build to a feeling of potential completion. It soon breaks down as segments are gradually destroyed due to algorithmically-controlled centralized over-saturation. This is an exploration of existing digital archiving techniques that are missing components to recreate the full computational environment.\n\nlinkRot is a dance that serves to emulate the physical euphoria that internet content creation permits to the digital decay that comes with loss (or is there even a feeling of loss?).\n\n#bangbangcon #bangbangconwest #bangbangconwest2020",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/ie8SnbvvSmE/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/ie8SnbvvSmE/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/ie8SnbvvSmE/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/ie8SnbvvSmE/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/ie8SnbvvSmE/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "Confreaks",
+    "playlistId": "PLE7tQUdRKcyYgBUkXZl3SPMvHmywTGvwk",
+    "position": 21,
+    "resourceId": {
+     "kind": "youtube#video",
+     "videoId": "ie8SnbvvSmE"
+    }
+   },
+   "contentDetails": {
+    "videoId": "ie8SnbvvSmE",
+    "videoPublishedAt": "2020-03-20T18:56:09.000Z"
+   }
+  },
+  {
+   "kind": "youtube#playlistItem",
+   "etag": "\"tnVOtk4NeGU6nDncDTE5m9SmuHc/iWZWE530HEVNqSeMX1PJW-PxBUs\"",
+   "id": "UExFN3RRVWRSS2N5WWdCVWtYWmwzU1BNdkhteXdUR3Z3ay4zRjM0MkVCRTg0MkYyQTM0",
+   "snippet": {
+    "publishedAt": "2020-03-23T15:58:07.000Z",
+    "channelId": "UCWnPjmqvljcafA0z2U1fwKQ",
+    "title": "!!Con West 2020: Tiffany Tseng - Packages, but in 3D!",
+    "description": "Presented at !!Con West 2020: http://bangbangcon.com/west\n\nEver received a beautiful geometric gift box (from a Japanese pastry shop, for example) and wondered how it was made? It turns out there’s a whole world of packaging design techniques and patterns! Unfortunately, many of these patterns exist only in print via packaging design books. These diagrams need to be translated to digital formats before they can be easily cut on a machine and assembled by hand!\n\nIn this talk, I’ll share how I built a web app called SVG Tracer (https://svg-tracer.glitch.me/) to translate photos of packaging diagrams to digital SVGs that can be directly sent to any Computer Numeric Controlled (CNC) desktop cutter. I’ll introduce some useful JavaScript SVG libraries and show some pretty boxes that I created with the tool! By the end of the talk, you’ll learn about how SVGs are an awesome medium for bridging art, programming, and fabrication.\n\n#bangbangcon #bangbangconwest #bangbangconwest2020",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/hVtiC6JBWKc/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/hVtiC6JBWKc/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/hVtiC6JBWKc/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/hVtiC6JBWKc/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/hVtiC6JBWKc/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "Confreaks",
+    "playlistId": "PLE7tQUdRKcyYgBUkXZl3SPMvHmywTGvwk",
+    "position": 22,
+    "resourceId": {
+     "kind": "youtube#video",
+     "videoId": "hVtiC6JBWKc"
+    }
+   },
+   "contentDetails": {
+    "videoId": "hVtiC6JBWKc",
+    "videoPublishedAt": "2020-03-20T18:51:57.000Z"
+   }
+  },
+  {
+   "kind": "youtube#playlistItem",
+   "etag": "\"tnVOtk4NeGU6nDncDTE5m9SmuHc/h9-dd15jdRUD9jzxzDTfvy2N0Mk\"",
+   "id": "UExFN3RRVWRSS2N5WWdCVWtYWmwzU1BNdkhteXdUR3Z3ay45NzUwQkI1M0UxNThBMkU0",
+   "snippet": {
+    "publishedAt": "2020-03-23T15:58:12.000Z",
+    "channelId": "UCWnPjmqvljcafA0z2U1fwKQ",
+    "title": "!!Con West 2020: Jessica Garson - How I solved my NYC parking problem with Python!",
+    "description": "Presented at !!Con West 2020: http://bangbangcon.com/west\n\nSince I have a car in New York City, my car is subject to the city’s alternate-side-of-the-street parking regulations. This means most nights I need to move my car before the early morning street cleaning that happens in my neighborhood. I had developed a nightly routine around moving my car before I go to bed. I am sometimes a bit too good at this, and I often move my car on days I don’t need to. Since alternate-side-of-the-street parking is often canceled on holidays or days where there is bad weather, there is a Twitter account, @NYCASP, which posts daily and whenever there is an emergency situation. I used Python, Twilio and the Twitter API to solve this problem for myself so I get a text message whenever I don’t need to move my car.\n\n#bangbangcon #bangbangconwest #bangbangconwest2020",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/y43v_2RWcRE/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/y43v_2RWcRE/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/y43v_2RWcRE/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/y43v_2RWcRE/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/y43v_2RWcRE/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "Confreaks",
+    "playlistId": "PLE7tQUdRKcyYgBUkXZl3SPMvHmywTGvwk",
+    "position": 23,
+    "resourceId": {
+     "kind": "youtube#video",
+     "videoId": "y43v_2RWcRE"
+    }
+   },
+   "contentDetails": {
+    "videoId": "y43v_2RWcRE",
+    "videoPublishedAt": "2020-03-20T18:51:57.000Z"
+   }
+  },
+  {
+   "kind": "youtube#playlistItem",
+   "etag": "\"tnVOtk4NeGU6nDncDTE5m9SmuHc/kv5EVUgc2VEBYC-cofEp3TknTL4\"",
+   "id": "UExFN3RRVWRSS2N5WWdCVWtYWmwzU1BNdkhteXdUR3Z3ay5DNzE1RjZEMUZCMjA0RDBB",
+   "snippet": {
+    "publishedAt": "2020-03-23T15:58:18.000Z",
+    "channelId": "UCWnPjmqvljcafA0z2U1fwKQ",
+    "title": "!!Con West 2020: Tom Verbeure - Cisco Purses Cubed!",
+    "description": "Presented at !!Con West 2020: http://bangbangcon.com/west\n\nTwelve discounted purses, obsolete Cisco hardware found on eBay, one cube. This talk shows how old stuff, destined to end up in the dump, can be upcycled into something entirely new: a story of reverse engineering unknown modems, dismantling hideous purses, LED driving protocols, designing PCBs on the cheap, some mechanical work, and reprogramming it all into a striking showpiece.\n\n#bangbangcon #bangbangconwest #bangbangconwest2020",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/0tBU5-lJYmU/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/0tBU5-lJYmU/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/0tBU5-lJYmU/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/0tBU5-lJYmU/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/0tBU5-lJYmU/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "Confreaks",
+    "playlistId": "PLE7tQUdRKcyYgBUkXZl3SPMvHmywTGvwk",
+    "position": 24,
+    "resourceId": {
+     "kind": "youtube#video",
+     "videoId": "0tBU5-lJYmU"
+    }
+   },
+   "contentDetails": {
+    "videoId": "0tBU5-lJYmU",
+    "videoPublishedAt": "2020-03-20T18:56:06.000Z"
+   }
+  },
+  {
+   "kind": "youtube#playlistItem",
+   "etag": "\"tnVOtk4NeGU6nDncDTE5m9SmuHc/dAnmN8S__wts8Q69m-HQ7LrdJ3E\"",
+   "id": "UExFN3RRVWRSS2N5WWdCVWtYWmwzU1BNdkhteXdUR3Z3ay43MTI1NDIwOTMwQjIxMzNG",
+   "snippet": {
+    "publishedAt": "2020-03-23T15:58:31.000Z",
+    "channelId": "UCWnPjmqvljcafA0z2U1fwKQ",
+    "title": "!!Con West 2020: Maria Mishurenko - It's alive, but not for long!!",
+    "description": "Presented at !!Con West 2020: http://bangbangcon.com/west\n\nMy virtual reality hair-cutting game Bizarre Barber started as a graduate thesis, so I couldn’t afford to hire professional 3D modelers and riggers to help out with character designs. My team decided to employ a procedural pipeline and write a tool that would allow us to generate thousands of characters.\n\nWith the help of Houdini, Vex and Python, we set up a generator to make a variety of cute birds and mutants with bold hairstyles and automatically export them to the game engine for further processing.\n\nSound awesome? Well, little did I know about human biases that would start to emerge when an artist turns into a curator and has to make tough decisions…\n\n\n#bangbangcon #bangbangconwest #bangbangconwest2020",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/qezuz0jTJ58/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/qezuz0jTJ58/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/qezuz0jTJ58/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/qezuz0jTJ58/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/qezuz0jTJ58/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "Confreaks",
+    "playlistId": "PLE7tQUdRKcyYgBUkXZl3SPMvHmywTGvwk",
+    "position": 25,
+    "resourceId": {
+     "kind": "youtube#video",
+     "videoId": "qezuz0jTJ58"
+    }
+   },
+   "contentDetails": {
+    "videoId": "qezuz0jTJ58",
+    "videoPublishedAt": "2020-03-20T18:51:56.000Z"
+   }
+  },
+  {
+   "kind": "youtube#playlistItem",
+   "etag": "\"tnVOtk4NeGU6nDncDTE5m9SmuHc/-YyuA7CcJ-TmSoT3uRpGE_RWUVE\"",
+   "id": "UExFN3RRVWRSS2N5WWdCVWtYWmwzU1BNdkhteXdUR3Z3ay5DQ0MyQ0Y4Mzg0M0VGOEYw",
+   "snippet": {
+    "publishedAt": "2020-03-23T15:58:38.000Z",
+    "channelId": "UCWnPjmqvljcafA0z2U1fwKQ",
+    "title": "!!Con West 2020: Naomi Saphra - Get Hooked On Neural Net Inspection! That was a pun!",
+    "description": "Presented at !!Con West 2020: http://bangbangcon.com/west\n\nSometimes you want to find out some information about a neural net in PyTorch while it runs. Like what if you wanted to do some math of your own on the math that happens inside the network? You can do that with hooks! Hooks can go on each module of a neural network to spy on the black box and whisper its secrets to you. No neural net will keep its secrets hidden from your perceptive functions.\n\n\n#bangbangcon #bangbangconwest #bangbangconwest2020",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/H17OQk7UeFM/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/H17OQk7UeFM/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/H17OQk7UeFM/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/H17OQk7UeFM/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/H17OQk7UeFM/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "Confreaks",
+    "playlistId": "PLE7tQUdRKcyYgBUkXZl3SPMvHmywTGvwk",
+    "position": 26,
+    "resourceId": {
+     "kind": "youtube#video",
+     "videoId": "H17OQk7UeFM"
+    }
+   },
+   "contentDetails": {
+    "videoId": "H17OQk7UeFM",
+    "videoPublishedAt": "2020-03-20T18:51:56.000Z"
+   }
+  },
+  {
+   "kind": "youtube#playlistItem",
+   "etag": "\"tnVOtk4NeGU6nDncDTE5m9SmuHc/vBFzP2wXSTwlAr3jhoHWsyuQJow\"",
+   "id": "UExFN3RRVWRSS2N5WWdCVWtYWmwzU1BNdkhteXdUR3Z3ay4yQUE2Q0JEMTk4NTM3RTZC",
+   "snippet": {
+    "publishedAt": "2020-03-23T15:58:44.000Z",
+    "channelId": "UCWnPjmqvljcafA0z2U1fwKQ",
+    "title": "!!Con West 2020: Lee Butterman - Drag Makeovers, via AI!",
+    "description": "Presented at !!Con West 2020: http://bangbangcon.com/west\n\nA new project, StyleGAN, represents faces in high-fidelity in 9000 dimensions, and can produce high-quality interpolation between those faces! They even provide pre-trained models on 70k faces from Flickr! These 9000 dimensions represent everything from facial pose to hair styles to background to skin tone and more. We can try to find encodings of several drag queens, in drag and out of drag, and use those differences to interpolate our own faces. This is available online as well, with your webcam, at https://leebutterman.com/drag-makeover.\n\n\n#bangbangcon #bangbangconwest #bangbangconwest2020",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/ESyuJyskDQo/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/ESyuJyskDQo/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/ESyuJyskDQo/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/ESyuJyskDQo/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/ESyuJyskDQo/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "Confreaks",
+    "playlistId": "PLE7tQUdRKcyYgBUkXZl3SPMvHmywTGvwk",
+    "position": 27,
+    "resourceId": {
+     "kind": "youtube#video",
+     "videoId": "ESyuJyskDQo"
+    }
+   },
+   "contentDetails": {
+    "videoId": "ESyuJyskDQo",
+    "videoPublishedAt": "2020-03-20T18:51:59.000Z"
+   }
+  },
+  {
+   "kind": "youtube#playlistItem",
+   "etag": "\"tnVOtk4NeGU6nDncDTE5m9SmuHc/QjXbfdcW_2zpOJ2drJ1y8jC7a5I\"",
+   "id": "UExFN3RRVWRSS2N5WWdCVWtYWmwzU1BNdkhteXdUR3Z3ay5DMkU4NTY1QUFGQTYwMDE3",
+   "snippet": {
+    "publishedAt": "2020-03-23T15:58:50.000Z",
+    "channelId": "UCWnPjmqvljcafA0z2U1fwKQ",
+    "title": "!!Con West 2020: Closing remarks",
+    "description": "Why is !!Con such a special place?  There's a feeling of transition when we go from the !!Con world back to the tech world at large; Joshua explores the feeling of that, and the question of how we can take some of that feeling back with us into the world at large.\n\n#bangbangcon #bangbangconwest #bangbangconwest2020",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/N93LiD2TMNU/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/N93LiD2TMNU/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/N93LiD2TMNU/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/N93LiD2TMNU/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/N93LiD2TMNU/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "Confreaks",
+    "playlistId": "PLE7tQUdRKcyYgBUkXZl3SPMvHmywTGvwk",
+    "position": 28,
+    "resourceId": {
+     "kind": "youtube#video",
+     "videoId": "N93LiD2TMNU"
+    }
+   },
+   "contentDetails": {
+    "videoId": "N93LiD2TMNU",
+    "videoPublishedAt": "2020-03-20T18:51:57.000Z"
+   }
+  }
+ ]
+}
