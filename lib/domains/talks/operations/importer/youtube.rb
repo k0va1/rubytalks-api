@@ -30,7 +30,7 @@ module Domains
 
           private
 
-          def process_playlists
+          def process_playlists # rubocop:disable Metrics/AbcSize
             playlists_to_process = yt_client.fetch_all_playlists(CONFREAKS_CHANNEL_ID).select do |item|
               buzzwords.any? { |word| item.snippet.title.strip.downcase.include?(word) }
             end
@@ -44,7 +44,7 @@ module Domains
           end
 
           # from `Uploads` playlist
-          def process_all_videos
+          def process_all_videos # rubocop:disable Metrics/AbcSize
             playlist_id = yt_client.fetch_upload_playlist_id(CONFREAKS_CHANNEL_ID)
 
             yt_client.fetch_all_playlist_items(playlist_id).each do |item|
@@ -55,7 +55,7 @@ module Domains
             end
           end
 
-          def persist_items
+          def persist_items # rubocop:disable Metrics/AbcSize
             return if talk_exists?(yt_parser.talk[:source_id])
 
             talk_repo.transaction do

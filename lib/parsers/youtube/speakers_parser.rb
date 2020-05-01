@@ -51,6 +51,7 @@ module Parsers
                         nlp_client.fetch_people(item.snippet.title)
                       rescue Util::Client::NlpClientError => e
                         logger.info("Couldn't parse speakers from title: #{item.snippet.title}")
+                        logger.info(e)
                         []
                       end
       end
