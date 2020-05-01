@@ -12,7 +12,13 @@ Hanami::Container.configure do |config|
     lib/repositories
     lib/domains
     lib/util
+    lib/parsers
   ]
+end
+
+if ENV['HANAMI_ENV'] == 'test'
+  require 'dry/container/stub'
+  Hanami::Container.enable_stubs!
 end
 
 require_relative 'import'
