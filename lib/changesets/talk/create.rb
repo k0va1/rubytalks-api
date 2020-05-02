@@ -3,8 +3,16 @@
 module Changesets
   module Talk
     class Create < ROM::Changeset::Create
-      map do
-        add_timestamps
+      include Import[
+        slug_generator: 'util.slug_generator'
+      ]
+
+      map do |tuple|
+        tuple.merge(
+          slug: slug_generator.call(tuple[:title]),
+          created_at: DateTime.now,
+          updated_at: DateTime.now
+        )
       end
     end
   end

@@ -8,6 +8,7 @@ Factory.define(:event) do |f|
   f.state { 'unpublished' }
   f.created_at { Time.now }
   f.updated_at { Time.now }
+  f.slug { |name| name.gsub(' ', '-').downcase }
 end
 
 Factory.define(approved_event: :event) do |f|

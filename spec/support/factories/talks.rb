@@ -8,6 +8,7 @@ Factory.define(:talk) do |f|
   f.talked_at { Faker::Date.backward(days: 365).to_s }
   f.updated_at { Time.now }
   f.created_at { Time.now }
+  f.slug { |title| title.gsub(' ', '-').downcase }
 end
 
 Factory.define(approved_talk: :talk) do |f|

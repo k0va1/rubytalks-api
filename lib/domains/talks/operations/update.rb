@@ -7,17 +7,29 @@ module Domains
         include Operation
         include Import[
           oembed: 'oembed',
-          talk_repo: 'repositories.talk'
+          talk_repo: 'repositories.talk',
+          slug_generator: 'util.slug_generator'
         ]
 
         # TODO: input checking
         def call(input)
           input = yield prepare_oembed(input)
+          input = yield generate_slug(input)
           talk = yield update_talk(input[:id], **input.reject { |k, _v| k == :id })
           Success(talk)
         end
 
         private
+
+        def generate_slug(input)
+          slug = slug_generator.call(input[:title])
+
+          if slug
+            Success(input.merge(slug: slug))
+          else
+            Failure('cant generate slug')
+          end
+        end
 
         def prepare_oembed(input)
           return Success(input) if input[:link].nil?

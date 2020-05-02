@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 
 ruby '2.6.3'
 
-gem 'hanami', '~> 2.0.0.alpha1'
+gem 'hanami', '2.0.0.alpha1'
 gem 'rake'
 
 gem 'rom'
@@ -32,6 +32,8 @@ gem 'ruby-oembed'
 
 # xml parser
 gem 'nokogiri'
+
+gem 'google-api-client'
 
 gem 'bcrypt'
 gem 'jwt'

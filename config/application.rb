@@ -17,9 +17,9 @@ module RubyTalks
     config.default_request_format = :json
     config.default_response_format = :json
 
-    config.logger = Hanami::Container[:my_logger]
+    config.logger = Hanami::Container[:app_logger]
     config.middleware.use Raven::Rack
-    config.middleware.use Hanami::CommonLogger, Hanami::Container[:my_logger]
+    config.middleware.use Hanami::CommonLogger, Hanami::Container[:app_logger]
     config.middleware.use Hanami::Middleware::BodyParser, :json
     config.middleware.use RubyTalks::Cors
     config.middleware.use RubyTalks::AdminApiAuthentication

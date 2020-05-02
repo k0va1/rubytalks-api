@@ -1,4 +1,9 @@
 confreaks_import:
   cron: "0 0 * * 0" # At 00:00 on Sunday
   class: "Domains::Talks::Workers::ConfreaksImport"
-  queue: default
+  queue: import
+
+yt_confreaks_import:
+  cron: "0 0 * * 0" # At 00:00 on Sunday
+  class: "Domains::Talks::Workers::YoutubeImport"
+  queue: import

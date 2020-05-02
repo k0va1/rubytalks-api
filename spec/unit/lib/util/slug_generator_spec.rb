@@ -28,6 +28,14 @@ RSpec.describe Util::SlugGenerator do
       is_expected.to eq('hello')
     end
 
+    context 'with unsupported symbols' do
+      let(:args) { 'Alex A. Koval' }
+
+      it 'removes unsupported symbols' do
+        is_expected.to eq('alex-a-koval')
+      end
+    end
+
     context 'when element has more than one word' do
       let(:args) { 'hello world' }
 
