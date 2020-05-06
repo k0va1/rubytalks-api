@@ -2,24 +2,14 @@
 
 module AdminApi
   module Serializers
-    class EventWithTalksAndSpeakers < Util::Web::Serializer
-      property :id
-      property :name
-      property :city
-      property :state
-      property :started_at
-      property :ended_at
-      property :slug
-
-      property :updated_at
-      property :created_at
-
+    class EventWithTalksAndSpeakers < Event
       collection :talks do
         property :id
         property :title
         property :state
       end
 
+      # TODO: fetch speakers from db
       # collection :speakers do
       #   property :id
       #   property :first_name

@@ -23,7 +23,7 @@ module AdminApi
           input = validate_params(request.params)
           result = update.call(input)
 
-          respond_with_success(response, result.value!, with: Serializers::Event)
+          respond_with_success(response, result.value!, with: Serializers::EventWithTalksAndSpeakers)
         end
       end
     end
