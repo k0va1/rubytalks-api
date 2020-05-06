@@ -3,16 +3,16 @@
 module Domains
   module Speakers
     module Operations
-      class ApprovedList
+      class UnpublishedList
         include Operation
         include Import[
           speaker_repo: 'repositories.speaker'
         ]
 
         def call(input)
-          talks = speaker_repo.all_approved(limit: input[:limit], offset: input[:offset])
+          speakers = speaker_repo.all_unpublished(limit: input[:limit], offset: input[:offset])
 
-          Success(talks)
+          Success(speakers)
         end
       end
     end

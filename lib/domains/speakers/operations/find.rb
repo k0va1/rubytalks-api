@@ -3,16 +3,15 @@
 module Domains
   module Speakers
     module Operations
-      class ApprovedList
+      class Find
         include Operation
         include Import[
           speaker_repo: 'repositories.speaker'
         ]
 
-        def call(input)
-          talks = speaker_repo.all_approved(limit: input[:limit], offset: input[:offset])
-
-          Success(talks)
+        def call(id:)
+          talk = Try(ROM::TupleCountMismatchError) { speaker_repo.find_by_id_with_talks(id: id) }
+          talk.to_result
         end
       end
     end

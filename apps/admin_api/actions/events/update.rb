@@ -13,6 +13,7 @@ module AdminApi
           required(:id).filled(:integer)
           optional(:name).filled(:str?)
           optional(:city).filled(:str?)
+          optional(:slug).filled(:str?)
           optional(:started_at).filled(:str?) # TODO: check iso8601
           optional(:ended_at).filled(:str?) # TODO: check iso8601
         end

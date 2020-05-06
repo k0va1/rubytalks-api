@@ -26,13 +26,38 @@ module Repositories
     def find_with_talks(id:)
       speakers
         .combine(:talks)
-        .with_state('approved')
+        .with_state(Types::States[:approved])
         .by_pk(id)
         .one!
     end
 
+    def find_by_id_with_talks(id:)
+      speakers
+        .combine(:talks)
+        .by_pk(id)
+        .one!
+    end
+
+    # TODO: a lot of boilerplate code here
+    # needed to generalize somehow later
     def all_approved(limit: nil, offset: nil)
-      combined = speakers.with_state('approved')
+      combined = speakers.with_state(Types::States[:approved])
+
+      return combined.to_a if limit.nil? && offset.nil?
+
+      apply_pagination(combined, offset, limit).one!
+    end
+
+    def all_unpublished(limit: nil, offset: nil)
+      combined = speakers.with_state(Types::States[:unpublished])
+
+      return combined.to_a if limit.nil? && offset.nil?
+
+      apply_pagination(combined, offset, limit).one!
+    end
+
+    def all_declined(limit: nil, offset: nil)
+      combined = speakers.with_state(Types::States[:declined])
 
       return combined.to_a if limit.nil? && offset.nil?
 

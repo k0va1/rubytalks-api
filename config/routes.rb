@@ -15,7 +15,9 @@ Hanami.application.routes do
   mount :admin_api, at: '/admin' do
     resources :talks, only: %i[show update] do
       collection do
+        get :approved
         get :unpublished
+        get :declined
       end
 
       member do
@@ -24,8 +26,22 @@ Hanami.application.routes do
       end
     end
 
-    resources :speakers, only: [:update]
-    resources :events, only: [:update]
+    resources :speakers, only: %i[update create show] do
+      collection do
+        get :approved
+        get :unpublished
+        get :declined
+      end
+    end
+
+    resources :events, only: %i[update create show] do
+      collection do
+        get :approved
+        get :unpublished
+        get :declined
+      end
+    end
+
     resources :tags, only: [:create] do
       collection do
         get :approved

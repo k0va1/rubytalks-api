@@ -1,16 +1,16 @@
 # frozen_string_literal: true
 
 module Domains
-  module Speakers
+  module Events
     module Operations
-      class ApprovedList
+      class DeclinedList
         include Operation
         include Import[
-          speaker_repo: 'repositories.speaker'
+          event_repo: 'repositories.event'
         ]
 
         def call(input)
-          talks = speaker_repo.all_approved(limit: input[:limit], offset: input[:offset])
+          talks = event_repo.all_declined(limit: input[:limit], offset: input[:offset])
 
           Success(talks)
         end

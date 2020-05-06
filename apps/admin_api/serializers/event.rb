@@ -9,6 +9,7 @@ module AdminApi
       property :state
       property :started_at
       property :ended_at
+      property :slug
 
       property :updated_at
       property :created_at

@@ -11,7 +11,23 @@ module Repositories
     end
 
     def all_approved(limit: nil, offset: nil)
-      combined = events.with_state('approved')
+      combined = events.with_state(Types::States[:approved])
+
+      return combined.to_a if limit.nil? && offset.nil?
+
+      apply_pagination(combined, offset, limit).one!
+    end
+
+    def all_declined(limit: nil, offset: nil)
+      combined = events.with_state(Types::States[:declined])
+
+      return combined.to_a if limit.nil? && offset.nil?
+
+      apply_pagination(combined, offset, limit).one!
+    end
+
+    def all_unpublished(limit: nil, offset: nil)
+      combined = events.with_state(Types::States[:unpublished])
 
       return combined.to_a if limit.nil? && offset.nil?
 
@@ -33,6 +49,13 @@ module Repositories
       events
         .combine(:talks)
         .with_state('approved')
+        .by_pk(id)
+        .one!
+    end
+
+    def find_by_id_with_talks(id:)
+      events
+        .combine(:talks)
         .by_pk(id)
         .one!
     end

@@ -3,26 +3,22 @@
 module AdminApi
   module Actions
     module Speakers
-      class Update < AdminApi::Action
+      class Show < AdminApi::Action
         include Dry::Monads::Result::Mixin
         include Import[
-          update: 'domains.speakers.operations.update'
+          find: 'domains.speakers.operations.find'
         ]
 
         params do
           required(:id).filled(:integer)
-          optional(:first_name).filled(:str?)
-          optional(:middle_name).filled(:str?)
-          optional(:last_name).filled(:str?)
-          optional(:slug).filled(:str?)
         end
 
         # TODO: handle failure
         def handle(request, response)
           input = validate_params(request.params)
-          result = update.call(input)
+          result = find.call(id: input[:id])
 
-          respond_with_success(response, result.value!, with: Serializers::Speaker)
+          respond_with(response, result, Serializers::SpeakerWithTalks)
         end
       end
     end

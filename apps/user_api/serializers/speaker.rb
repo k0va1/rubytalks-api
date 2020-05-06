@@ -5,6 +5,7 @@ module UserApi
     class Speaker < Util::Web::Serializer
       property :id
       property :first_name
+      property :middle_name
       property :last_name
       property :slug
       property :state
