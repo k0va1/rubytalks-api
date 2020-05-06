@@ -12,7 +12,9 @@ module AdminApi
         params do
           required(:id).filled(:integer)
           optional(:first_name).filled(:str?)
+          optional(:middle_name).filled(:str?)
           optional(:last_name).filled(:str?)
+          optional(:slug).filled(:str?)
         end
 
         # TODO: handle failure
