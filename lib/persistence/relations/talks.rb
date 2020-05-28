@@ -22,6 +22,10 @@ module Persistence
       def without_state(given_state)
         where { state.not(given_state) }
       end
+
+      def search(q)
+        where { Sequel.lit(["", " @@ ", ""], string.to_tsvector(title), string.phraseto_tsquery(q)) }
+      end
     end
   end
 end
