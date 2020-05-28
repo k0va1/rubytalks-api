@@ -5,12 +5,12 @@ module UserApi
     class Events
       include Import[
         prepare_pagination: 'util.pagination.prepare',
-        approved_list: 'domains.events.operations.approved_list'
+        list: 'domains.events.operations.list'
       ]
 
-      def approved_events_list(input)
+      def event_list(input)
         input = prepare_pagination.call(input)
-        approved_list.call(input)
+        list.call(input)
       end
     end
   end

@@ -6,11 +6,11 @@ module Domains
       class List
         include Operation
         include Import[
-          talk_repo: 'repositories.talk'
+          talk_query: 'domains.talks.queries.talk'
         ]
 
-        def call
-          talks = talk_repo.all
+        def call(input)
+          talks = talk_query.all(input)
 
           Success(talks)
         end
