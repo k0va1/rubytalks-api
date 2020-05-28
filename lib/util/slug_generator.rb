@@ -5,7 +5,9 @@ module Util
     UNSUPPORTED_SYMBOLS = /[^A-Za-z0-9\-]/.freeze
 
     def call(*args)
-      args.to_a.compact.flatten.map(&:split).join('-').downcase.gsub(UNSUPPORTED_SYMBOLS, '')
+      args.to_a.flatten.select do |e|
+        Hanami::Utils::Blank.filled?(e)
+      end.map(&:split).join('-').downcase.gsub(UNSUPPORTED_SYMBOLS, '')
     end
   end
 end
