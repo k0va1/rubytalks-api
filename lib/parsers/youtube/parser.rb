@@ -10,6 +10,7 @@ module Parsers
         parse_speakers(item)
         parse_tags(item)
         parse_event(item, playlist)
+        normalize_talk_title
       end
 
       private
@@ -28,6 +29,14 @@ module Parsers
 
       def parse_event(item, playlist)
         @event = Parsers::Youtube::EventParser.new(item, playlist).call
+      end
+
+      def normalize_talk_title
+        remove_event_name if Hanami::Utils::Blank.filled?(event)
+      end
+
+      def remove_event_name
+        talk.update(title: talk[:title].gsub(/#{event[:name]}\s*(-|:)?\s*/, ''))
       end
     end
   end
