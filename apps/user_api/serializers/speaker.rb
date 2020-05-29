@@ -8,10 +8,14 @@ module UserApi
       property :middle_name
       property :last_name
       property :slug
-      property :state
+      property :full_name, exec_context: :decorator
 
       property :updated_at
       property :created_at
+
+      def full_name
+        [represented.first_name, represented.middle_name, represented.last_name].compact.join(" ")
+      end
     end
   end
 end
