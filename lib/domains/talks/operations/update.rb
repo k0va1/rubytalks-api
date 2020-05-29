@@ -6,16 +6,16 @@ module Domains
       class Update
         include Operation
         include Import[
-          oembed: 'oembed',
           talk_repo: 'repositories.talk',
+          speaker_repo: 'repositories.speaker',
+          speaking_repo: 'repositories.speaking',
           slug_generator: 'util.slug_generator'
         ]
 
         # TODO: input checking
         def call(input)
-          input = yield prepare_oembed(input)
           input = yield generate_slug(input)
-          talk = yield update_talk(input[:id], **input.reject { |k, _v| k == :id })
+          talk = yield update_talk(input)
           Success(talk)
         end
 
@@ -31,21 +31,25 @@ module Domains
           end
         end
 
-        def prepare_oembed(input)
-          return Success(input) if input[:link].nil?
+        def update_talk(input)
+          id = input.delete(:id)
+          speaker_ids = input.delete(:speakers).flat_map(&:values)
+          event_id = input.dig(:event, :id)
 
-          oembed = yield generate_oembed(input[:link])
+          talk_repo.transaction do
+            talk_repo.update(id, **input.merge(event_id: event_id))
 
-          Success(input.merge(embed_code: oembed))
-        end
+            all_speakings = speaking_repo.all_by_talk_id(id)
+            all_speakings.each do |sp|
+              speaking_repo.delete(sp.id) unless speaker_ids.include?(sp.speaker_id)
+            end
 
-        def generate_oembed(link)
-          Try(OEmbed::Error) { oembed.get(link).html }.to_result
-        end
+            speaker_ids.each do |sp_id|
+              speaking_repo.find_or_create(talk_id: id, speaker_id: sp_id)
+            end
+          end
 
-        def update_talk(id, input)
-          talk_repo.update(id, **input)
-          talk = talk_repo.talks.combine(:speakers).by_pk(id).one
+          talk = talk_repo.talks.combine(:speakers, :event).by_pk(id).one
 
           if talk
             Success(talk)
