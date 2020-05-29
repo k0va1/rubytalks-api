@@ -13,10 +13,10 @@ module AdminApi
           required(:id).filled(:integer)
         end
 
-        # TODO: handle failure
         def handle(request, response)
-          input = validate_params(request.params)
-          result = decline.call(input[:id])
+          result = validate_params(request.params).bind do |input|
+            decline.call(input[:id])
+          end
 
           respond_with(response, result, Serializers::Talk)
         end

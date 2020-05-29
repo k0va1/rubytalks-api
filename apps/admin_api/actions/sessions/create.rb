@@ -17,12 +17,12 @@ module AdminApi
           required(:password).filled(:str?)
         end
 
-        # TODO: handle failure
         def handle(request, response)
-          input = validate_params(request.params)
-          result = create_session.call(input)
+          result = validate_params(request.params).bind do |input|
+            create_session.call(input)
+          end
 
-          respond_with_success(response, result.value!, with: Serializers::User, status: 201)
+          respond_with(response, result, Serializers::User, status: 201)
         end
       end
     end

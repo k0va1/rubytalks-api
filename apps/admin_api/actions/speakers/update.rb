@@ -17,12 +17,12 @@ module AdminApi
           optional(:slug).filled(:str?)
         end
 
-        # TODO: handle failure
         def handle(request, response)
-          input = validate_params(request.params)
-          result = update.call(input)
+          result = validate_params(request.params).bind do |input|
+            update.call(input)
+          end
 
-          respond_with_success(response, result.value!, with: Serializers::Speaker)
+          respond_with(response, result, Serializers::Speaker)
         end
       end
     end
