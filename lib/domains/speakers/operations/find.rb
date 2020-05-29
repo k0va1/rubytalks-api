@@ -10,8 +10,8 @@ module Domains
         ]
 
         def call(id:)
-          talk = Try(ROM::TupleCountMismatchError) { speaker_repo.find_by_id_with_talks(id: id) }
-          talk.to_result
+          speaker = Try(ROM::TupleCountMismatchError) { speaker_repo.find_by_id_with_talks(id: id) }
+          speaker.to_result
         end
       end
     end
