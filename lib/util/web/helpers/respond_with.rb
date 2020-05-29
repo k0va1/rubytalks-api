@@ -4,16 +4,13 @@ module Util
   module Web
     module Helpers
       module RespondWith
-        ERRORS_MAPPER = [
-          { error_class: ROM::TupleCountMismatchError, status: 404, message: 'Record not found', context: nil }
-        ].freeze
+        ERRORS = Hanami::Utils::Hash.deep_symbolize(YAML.load_file(Hanami.root.join('config', 'errors.yml'))).freeze
 
         def respond_with(response, result, serializer, status: 200)
           if result.success?
             respond_with_success(response, result.value!, with: serializer, status: status)
           else
-            error = fetch_error(result.failure)
-            respond_with_failure(response, result.failure, status: error[:status])
+            respond_with_failure(response, result.failure)
           end
         end
 
@@ -27,7 +24,7 @@ module Util
               status: status
             )
           else
-            respond_with_failure(response, result.failure, status: status)
+            respond_with_failure(response, result.failure)
           end
         end
 
@@ -36,12 +33,20 @@ module Util
           response.body   = base.new(value, with: with).to_json
         end
 
-        def respond_with_failure(response, _value, status: 400)
-          response.status = status
-        end
-
-        def fetch_error(error_class)
-          ERRORS_MAPPER.find { |error| error_class == error[:error_class] }
+        # TODO: refactor ASAP
+        def respond_with_failure(response, value, status: 400)
+          if value.is_a?(Hash)
+            response.body = {
+              errors: [value[:validation].errors.to_h]
+            }.to_json
+            response.status = status
+          else
+            ERRORS.fetch(value)
+            response.body = {
+              error: error
+            }.to_json
+            response.status = error[:code]
+          end
         end
       end
     end
