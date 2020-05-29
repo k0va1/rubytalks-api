@@ -13,8 +13,6 @@ module AdminApi
       property :talked_at
       property :updated_at
       property :created_at
-
-      collection :speakers, decorator: AdminApi::Serializers::Speaker
     end
   end
 end
