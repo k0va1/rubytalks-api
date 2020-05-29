@@ -15,14 +15,35 @@ module UserApi
           required(:link).filled(:string)
           required(:talked_at).filled(:date_time)
 
-          required(:speakers).each(Types::Speaker)
+          optional(:speakers).each(Types::Speaker)
+          optional(:event).hash do
+            optional(:id).filled(:integer)
+            optional(:name).filled(:string)
+            optional(:city).filled(:string)
+            optional(:started_at).filled(:string) # TODO: check iso8601
+            optional(:ended_at).filled(:string) # TODO: check iso8601
+          end
+
+          optional(:tags).each do
+            hash do
+              optional(:id).filled(:integer)
+              optional(:title).filled(:string)
+            end
+          end
         end
 
         def handle(request, response)
-          input = validate_params(request.params)
-          result = create.call(input)
+          result = validate_params(request.params).bind do |input|
+            create.call(input)
+          end
 
-          respond_with(response, result, Serializers::Talk)
+          case result
+          when Success
+            response.body = { data: { message: 'Talk has been submitted' } }
+            response.status = 201
+          when Failure
+            respond_with_failure(response, result.failure)
+          end
         end
       end
     end
