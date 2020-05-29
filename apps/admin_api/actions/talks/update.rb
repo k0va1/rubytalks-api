@@ -12,17 +12,23 @@ module AdminApi
         params do
           required(:id).filled(:integer)
           optional(:title).filled(:str?)
-          optional(:description).filled(:str?)
+          optional(:description).maybe(:str?)
           optional(:talked_at).filled(:str?) # TODO: check iso8601 type
           optional(:link).filled(:str?)
+          optional(:event).maybe(:hash) do
+            required(:id).filled(:integer)
+          end
+          optional(:speakers).array(:hash) do
+            optional(:id).filled(:integer)
+          end
         end
 
-        # TODO: handle failure
         def handle(request, response)
-          input = validate_params(request.params)
-          result = update.call(input)
+          result = validate_params(request.params).bind do |input|
+            update.call(input)
+          end
 
-          respond_with_success(response, result.value!, with: Serializers::Talk)
+          respond_with(response, result, Serializers::TalkWithSpeakersAndEvent)
         end
       end
     end
