@@ -3,6 +3,7 @@
 module Repositories
   class Talk < ROM::Repository[:talks]
     include Import.args[:rom]
+    include ::Util::Pagination::Apply
 
     commands :create, update: :by_pk
 
@@ -10,16 +11,6 @@ module Repositories
       return talks.to_a if limit.nil? && offset.nil?
 
       apply_pagination(talks, offset, limit).one!
-    end
-
-    def all_approved(limit: nil, offset: nil)
-      combined = talks
-                 .combine(:speakers, :event)
-                 .with_state('approved')
-
-      return combined.to_a if limit.nil? && offset.nil?
-
-      apply_pagination(combined, offset, limit).one!
     end
 
     def all_ordered_by_created_at
@@ -39,8 +30,7 @@ module Repositories
 
     def find_unpublished(limit: nil, offset: nil)
       combined = talks
-                 .combine(:speakers, :event)
-                 .with_state('unpublished')
+                 .with_state(Types::States[:unpublished])
                  .order { created_at.desc }
 
       return combined.to_a if limit.nil? && offset.nil?
@@ -59,7 +49,7 @@ module Repositories
 
     def find_approved_by_id_with_speakers_and_event(id)
       talks
-        .combine(:speakers, :event)
+        .combine(:speakers, :event, :tags)
         .with_state('approved')
         .by_pk(id)
         .one!
@@ -70,15 +60,6 @@ module Repositories
         .combine(:speakers, :event)
         .by_pk(id)
         .one!
-    end
-
-    private
-
-    def apply_pagination(relation, offset, limit)
-      with_opts = relation.limit(limit)
-      with_opts = with_opts.offset(offset) if offset.positive?
-
-      with_opts >> Util::Pagination::Mapper.new(relation)
     end
   end
 end
