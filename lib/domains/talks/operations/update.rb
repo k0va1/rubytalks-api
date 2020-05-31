@@ -31,9 +31,10 @@ module Domains
           end
         end
 
-        def update_talk(input)
+        # TODO: refactor
+        def update_talk(input) # rubocop:disable Metrics/AbcSize, Metrics/MethodLength
           id = input.delete(:id)
-          speaker_ids = input.delete(:speakers).flat_map(&:values)
+          speaker_ids = input.delete(:speakers).to_a.flat_map(&:values)
           event_id = input.dig(:event, :id)
 
           talk_repo.transaction do

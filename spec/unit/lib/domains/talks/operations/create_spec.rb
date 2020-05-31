@@ -8,6 +8,7 @@ RSpec.describe Domains::Talks::Operations::Create do
   let(:talk_form) do
     Factory.structs[:talk].attributes.merge(
       speakers: [Factory.structs[:speaker].attributes],
+      tags: [Factory.structs[:tag].attributes],
       event: Factory.structs[:event].attributes,
       talk: Factory.structs[:talk].attributes
     )

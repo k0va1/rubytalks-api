@@ -9,6 +9,7 @@ module AdminApi
       property :link
       property :embed_code
       property :state
+      property :slug
 
       property :talked_at
       property :updated_at

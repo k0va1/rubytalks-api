@@ -15,15 +15,15 @@ Hanami::Container.configure do |config|
   ]
 end
 
-# use telegram mock in development
+# use telegram mock in development and test
 # don't like this. mb better solution exists
 Hanami::Container.auto_register!('lib/util') do |cfg|
   cfg.exclude do |component|
-    component.identifier == "util.client.telegram" if ENV['HANAMI_ENV'] == 'development'
+    component.identifier == 'util.client.telegram' if ENV['HANAMI_ENV'] != 'production'
   end
 end
 
-if ENV['HANAMI_ENV'] == 'development'
+if ENV['HANAMI_ENV'] != 'production'
   require_relative '../lib/util/client/telegram'
   Hanami::Container.register('util.client.telegram', Util::Client::TelegramMock.new)
 end

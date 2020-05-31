@@ -6,7 +6,7 @@ module UserApi
       property :id
       property :name
       property :city
-      property :state
+      property :slug
       property :started_at
       property :ended_at
 

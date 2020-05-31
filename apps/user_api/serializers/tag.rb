@@ -9,5 +9,3 @@ module UserApi
     end
   end
 end
-
-

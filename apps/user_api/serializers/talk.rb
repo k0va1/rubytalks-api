@@ -8,6 +8,7 @@ module UserApi
       property :description
       property :link
       property :embed_code
+      property :slug
 
       property :talked_at
       property :updated_at

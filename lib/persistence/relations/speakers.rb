@@ -17,15 +17,15 @@ module Persistence
       def search(query)
         where do
           Sequel.lit(
-            ["", " @@ ", ""],
+            ['', ' @@ ', ''],
             string.to_tsvector(first_name),
             string.phraseto_tsquery(query)
           ) |
-          Sequel.lit(
-            ["", " @@ ", ""],
-            string.to_tsvector(last_name),
-            string.phraseto_tsquery(query)
-          )
+            Sequel.lit(
+              ['', ' @@ ', ''],
+              string.to_tsvector(last_name),
+              string.phraseto_tsquery(query)
+            )
         end
       end
     end

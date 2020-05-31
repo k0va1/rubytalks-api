@@ -27,7 +27,7 @@ RSpec.describe 'AdminApi: Tags', type: :request do
     end
   end
 
-  describe 'GET /admin_api/tags/unpublished' do
+  describe 'GET /admin_api/tags' do
     context 'with authentication' do
       let!(:tag1) { Factory[:tag, state: 'unpublished'] }
       let!(:tag2) { Factory[:tag, state: 'approved'] }
@@ -36,55 +36,37 @@ RSpec.describe 'AdminApi: Tags', type: :request do
       let(:headers) { default_headers.merge(auth_header) }
 
       context 'valid params' do
-        it 'returns 200' do
-          get '/admin/tags/unpublished', headers: headers
+        describe 'unpublished' do
+          it 'returns 200' do
+            get '/admin/tags?state=unpublished', headers: headers
 
-          expect(response_status).to eq 200
-          expect(response_data.size).to be > 0
-          expect(response_data.first['state']).to eq('unpublished')
-          expect(response_data).to match_json_schema('admin_api/tags')
+            expect(response_status).to eq 200
+            expect(response_data.size).to be > 0
+            expect(response_data.first['state']).to eq('unpublished')
+            expect(response_data).to match_json_schema('admin_api/tags')
+          end
         end
-      end
-    end
-  end
 
-  describe 'GET /admin_api/tags/approved' do
-    context 'with authentication' do
-      let!(:tag1) { Factory[:tag, state: 'unpublished'] }
-      let!(:tag2) { Factory[:tag, state: 'approved'] }
-      let!(:tag3) { Factory[:tag, state: 'declined'] }
+        describe 'approved' do
+          it 'returns 200' do
+            get '/admin/tags?state=approved', headers: headers
 
-      let(:headers) { default_headers.merge(auth_header) }
-
-      context 'valid params' do
-        it 'returns 200' do
-          get '/admin/tags/approved', headers: headers
-
-          expect(response_status).to eq 200
-          expect(response_data.size).to be > 0
-          expect(response_data.first['state']).to eq('approved')
-          expect(response_data).to match_json_schema('admin_api/tags')
+            expect(response_status).to eq 200
+            expect(response_data.size).to be > 0
+            expect(response_data.first['state']).to eq('approved')
+            expect(response_data).to match_json_schema('admin_api/tags')
+          end
         end
-      end
-    end
-  end
 
-  describe 'GET /admin_api/tags/declined' do
-    context 'with authentication' do
-      let!(:tag1) { Factory[:tag, state: 'unpublished'] }
-      let!(:tag2) { Factory[:tag, state: 'approved'] }
-      let!(:tag3) { Factory[:tag, state: 'declined'] }
+        describe 'declined' do
+          it 'returns 200' do
+            get '/admin/tags?state=declined', headers: headers
 
-      let(:headers) { default_headers.merge(auth_header) }
-
-      context 'valid params' do
-        it 'returns 200' do
-          get '/admin/tags/declined', headers: headers
-
-          expect(response_status).to eq 200
-          expect(response_data.size).to be > 0
-          expect(response_data.first['state']).to eq('declined')
-          expect(response_data).to match_json_schema('admin_api/tags')
+            expect(response_status).to eq 200
+            expect(response_data.size).to be > 0
+            expect(response_data.first['state']).to eq('declined')
+            expect(response_data).to match_json_schema('admin_api/tags')
+          end
         end
       end
     end

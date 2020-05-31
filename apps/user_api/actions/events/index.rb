@@ -13,7 +13,6 @@ module UserApi
           optional(:page).filled(:integer)
           optional(:per_page).filled(:integer)
           optional(:query).maybe(:string)
-          required(:state).value(eql?: Types::States[:approved])
         end
 
         def handle(request, response)

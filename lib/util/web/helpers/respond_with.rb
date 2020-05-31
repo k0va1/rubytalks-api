@@ -41,7 +41,7 @@ module Util
             }.to_json
             response.status = status
           else
-            ERRORS.fetch(value)
+            error = ERRORS.fetch(value)
             response.body = {
               error: error
             }.to_json

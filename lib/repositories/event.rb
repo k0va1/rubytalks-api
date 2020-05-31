@@ -14,7 +14,7 @@ module Repositories
     end
 
     def find_or_create(event_form)
-      event = by_pk(event_form[:id]).one if event_form[:id]
+      event = root.by_pk(event_form[:id]).one if event_form[:id]
       event || events.changeset(Changesets::Event::Create, event_form).commit
     end
 

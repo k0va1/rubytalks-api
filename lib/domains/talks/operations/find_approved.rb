@@ -10,7 +10,8 @@ module Domains
         ]
 
         def call(id:)
-          talk = Try(ROM::TupleCountMismatchError) { talk_repo.find_approved_by_id_with_speakers_and_event(id) }.or { Failure(:not_found) }
+          talk = Try(ROM::TupleCountMismatchError) { talk_repo.find_approved_by_id_with_speakers_and_event(id) }
+                 .or { Failure(:not_found) }
           talk.to_result
         end
       end

@@ -1,0 +1,7 @@
+{
+  "id": "file:/admin_api/events.json",
+  "type": "array",
+  "items": {
+    "$ref": "file:/admin_api/event.json#"
+  }
+}

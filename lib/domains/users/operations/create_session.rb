@@ -19,7 +19,7 @@ module Domains
           if user && password_matcher.equals?(user.password_digest, params[:password])
             Success(AuthData.new(user.id, user.username, encoded_token(user.username)))
           else
-            Failure('invalid username of password')
+            Failure(:invalid_credentials)
           end
         end
 

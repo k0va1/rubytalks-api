@@ -14,7 +14,7 @@ module UserApi
       property :created_at
 
       def full_name
-        [represented.first_name, represented.middle_name, represented.last_name].compact.join(" ")
+        [represented.first_name, represented.middle_name, represented.last_name].compact.join(' ')
       end
     end
   end

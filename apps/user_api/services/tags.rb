@@ -9,7 +9,7 @@ module UserApi
       ]
 
       def tag_list(input)
-        input = prepare_pagination.call(input)
+        input = prepare_pagination.call(input).merge(state: Types::States[:approved])
         list.call(input)
       end
     end

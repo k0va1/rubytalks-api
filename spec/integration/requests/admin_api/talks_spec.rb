@@ -5,22 +5,46 @@ RSpec.describe 'AdminApi: Talks', type: :request do
   let(:jwt_token) { Hanami::Container['jwt'].encode(username: admin.username) }
   let(:auth_header) { { 'Authorization' => "Bearer #{jwt_token}" } }
 
-  describe 'GET /admin_api/talks/unpublished' do
+  describe 'GET /admin_api/talks' do
     context 'with authentication' do
+      let!(:talk1) { Factory[:unpublished_talk] }
+      let!(:talk2) { Factory[:approved_talk] }
+      let!(:talk3) { Factory[:declined_talk] }
+
       let(:headers) { default_headers.merge(auth_header) }
 
       context 'valid params' do
-        before do
-          talk = Factory.structs[:unpublished_talk]
-          Hanami::Container['repositories.talk'].create(talk)
+        describe 'unpublished' do
+          it 'returns 200' do
+            get '/admin/talks?state=unpublished', headers: headers
+
+            expect(response_status).to eq 200
+            expect(response_data.size).to be > 0
+            expect(response_data.first['state']).to eq('unpublished')
+            expect(response_data).to match_json_schema('admin_api/talks')
+          end
         end
 
-        it 'returns 200' do
-          get '/admin/talks/unpublished', headers: headers
+        describe 'approved' do
+          it 'returns 200' do
+            get '/admin/talks?state=approved', headers: headers
 
-          expect(response_status).to eq 200
-          expect(response_data.size).to be > 0
-          expect(response_data).to match_json_schema('admin_api/talks')
+            expect(response_status).to eq 200
+            expect(response_data.size).to be > 0
+            expect(response_data.first['state']).to eq('approved')
+            expect(response_data).to match_json_schema('admin_api/talks')
+          end
+        end
+
+        describe 'declined' do
+          it 'returns 200' do
+            get '/admin/talks?state=declined', headers: headers
+
+            expect(response_status).to eq 200
+            expect(response_data.size).to be > 0
+            expect(response_data.first['state']).to eq('declined')
+            expect(response_data).to match_json_schema('admin_api/talks')
+          end
         end
       end
     end

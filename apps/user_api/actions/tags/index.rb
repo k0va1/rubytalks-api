@@ -12,8 +12,7 @@ module UserApi
         params do
           optional(:page).filled(:integer)
           optional(:per_page).filled(:integer)
-          required(:query).maybe(:string)
-          required(:state).value(eql?: Types::States[:approved])
+          optional(:query).maybe(:string)
         end
 
         def handle(request, response)

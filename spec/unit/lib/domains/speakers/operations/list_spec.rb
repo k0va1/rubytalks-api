@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-RSpec.describe Domains::Speakers::Operations::ApprovedList do
+RSpec.describe Domains::Speakers::Operations::List do
   subject { operation.call({}) }
 
-  let(:operation) { described_class.new(speaker_repo: speaker_repo) }
-  let(:speaker_repo) { instance_double(Repositories::Speaker, all_approved: speakers) }
+  let(:operation) { described_class.new(speaker_query: speaker_query) }
+  let(:speaker_query) { instance_double(Domains::Speakers::Queries::Speaker, all: speakers) }
   let(:speakers) do
     3.times.map { Factory.structs[:speaker] }
   end
@@ -16,7 +16,7 @@ RSpec.describe Domains::Speakers::Operations::ApprovedList do
   end
 
   context 'when there are no speakers' do
-    let(:speaker_repo) { instance_double(Repositories::Speaker, all_approved: []) }
+    let(:speaker_query) { instance_double(Domains::Speakers::Queries::Speaker, all: []) }
 
     it { expect(subject).to be_success }
     it { expect(subject.value!.length).to eq(0) }

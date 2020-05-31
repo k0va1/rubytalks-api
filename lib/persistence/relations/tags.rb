@@ -15,7 +15,7 @@ module Persistence
       end
 
       def search(query)
-        where { Sequel.lit(["", " @@ ", ""], string.to_tsvector(title), string.phraseto_tsquery(query)) }
+        where { Sequel.lit(['', ' @@ ', ''], string.to_tsvector(title), string.phraseto_tsquery(query)) }
       end
     end
   end
