@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 ROM::SQL.migration do
-  change do
+  up do
     execute "CREATE TYPE state AS ENUM ('unpublished', 'approved', 'declined');"
 
     create_table :speakers do
@@ -16,5 +16,11 @@ ROM::SQL.migration do
       column :created_at, DateTime, null: false
       column :updated_at, DateTime, null: false
     end
+  end
+
+  down do
+    execute 'DROP TYPE state CASCADE;'
+
+    drop_table(:speakers)
   end
 end

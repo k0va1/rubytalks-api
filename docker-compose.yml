@@ -24,7 +24,7 @@ services:
       - hanami_cache:/app/tmp/cache
       - bundle:/usr/local/bundle
       - .dockerdev/.psqlrc:/root/.psqlrc:ro
-      - .dockerdev/.bash_aliases:/home/user/.bash_aliases
+      - .dockerdev/.bash_aliases:/home/rubytalks/.bash_aliases
     environment:
       - HANAMI_ENV=${HANAMI_ENV:-development}
       - REDIS_URL=redis://redis:6379/
