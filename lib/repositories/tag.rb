@@ -16,6 +16,11 @@ module Repositories
       tag || create(params)
     end
 
+    def find_or_create_by_id(params)
+      tag = root.by_pk(params[:id]).one
+      tag || create(params)
+    end
+
     def find_by_slug(slug)
       tags.where(slug: slug).one
     end

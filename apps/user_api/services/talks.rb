@@ -5,12 +5,12 @@ module UserApi
     class Talks
       include Import[
         prepare_pagination: 'util.pagination.prepare',
-        approved_list: 'domains.talks.operations.approved_list'
+        list: 'domains.talks.operations.list'
       ]
 
-      def approved_talks_list(input)
-        input = prepare_pagination.call(input)
-        approved_list.call(input)
+      def talk_list(input)
+        input = prepare_pagination.call(input).merge(state: Types::States[:approved])
+        list.call(input)
       end
     end
   end

@@ -12,6 +12,10 @@ module Persistence
       def with_state(state)
         where(state: state)
       end
+
+      def search(query)
+        where { Sequel.lit(['', ' @@ ', ''], string.to_tsvector(name), string.phraseto_tsquery(query)) }
+      end
     end
   end
 end

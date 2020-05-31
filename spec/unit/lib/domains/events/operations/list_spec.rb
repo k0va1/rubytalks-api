@@ -3,8 +3,8 @@
 RSpec.describe Domains::Events::Operations::List do
   subject { operation.call({}) }
 
-  let(:operation) { described_class.new(event_repo: event_repo) }
-  let(:event_repo) { instance_double(Repositories::Event, all: events) }
+  let(:operation) { described_class.new(event_query: event_query) }
+  let(:event_query) { instance_double(Domains::Events::Queries::Event, all: events) }
 
   let(:events) do
     3.times.map { Factory.structs[:event] }
@@ -17,7 +17,7 @@ RSpec.describe Domains::Events::Operations::List do
   end
 
   context 'when there are no events' do
-    let(:event_repo) { instance_double(Repositories::Event, all: []) }
+    let(:event_query) { instance_double(Domains::Events::Queries::Event, all: []) }
 
     it { expect(subject).to be_success }
     it { expect(subject.value!.length).to eq(0) }

@@ -8,7 +8,7 @@ RSpec.describe UserApi::Actions::Talks::Show do
   context 'when operation is success' do
     let(:speaking) { Factory[:speaking] }
     let(:talk_repo) { Repositories::Talk.new(Hanami::Container[:rom]) }
-    let(:talk) { talk_repo.talks.combine(:speakers).by_pk(speaking.talk.id).one }
+    let(:talk) { talk_repo.talks.combine(:speakers, :event, :tags).by_pk(speaking.talk.id).one }
     let(:operation) { ->(*) { Success(talk) } }
     let(:params) { { id: talk.id } }
 
@@ -17,9 +17,9 @@ RSpec.describe UserApi::Actions::Talks::Show do
 
   context 'when operation is failure' do
     let(:params) { { id: -100 } }
-    let(:operation) { ->(*) { Failure(ROM::TupleCountMismatchError) } }
+    let(:operation) { ->(*) { Failure(:not_found) } }
 
-    it 'redirects to 404' do
+    it 'returns 404' do
       expect(subject[0]).to eq(404)
     end
   end

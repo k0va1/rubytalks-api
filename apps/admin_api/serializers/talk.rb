@@ -9,12 +9,11 @@ module AdminApi
       property :link
       property :embed_code
       property :state
+      property :slug
 
       property :talked_at
       property :updated_at
       property :created_at
-
-      collection :speakers, decorator: AdminApi::Serializers::Speaker
     end
   end
 end

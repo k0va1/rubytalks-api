@@ -8,6 +8,7 @@
     "link",
     "embed_code",
     "state",
+    "slug",
     "talked_at",
     "updated_at",
     "created_at"
@@ -19,6 +20,7 @@
     "link": { "type": "string" },
     "embed_code": { "type": "string" },
     "state": { "type": "string" },
+    "slug": { "type": "string" },
     "talked_at": { "type": ["null", "string"] },
     "updated_at": { "type": "string" },
     "created_at": { "type": "string" }

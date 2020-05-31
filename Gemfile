@@ -44,6 +44,8 @@ gem 'hiredis'
 gem 'sidekiq'
 gem 'sidekiq-cron'
 
+gem 'telegram-bot-ruby'
+
 group :development do
   gem 'guard-puma'
   # code style

@@ -1,0 +1,7 @@
+not_found:
+  code: 404
+  message: 'Not Found'
+
+invalid_credentials:
+  code: 401
+  message: 'Invalid username of password'

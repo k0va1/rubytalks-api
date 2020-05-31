@@ -10,7 +10,7 @@ module Domains
         ]
 
         def call(id:)
-          talk = Try(ROM::TupleCountMismatchError) { talk_repo.find_unapproved(id) }
+          talk = Try(ROM::TupleCountMismatchError) { talk_repo.find_unapproved(id) }.or { Failure(:not_found) }
           talk.to_result
         end
       end

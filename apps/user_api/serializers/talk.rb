@@ -8,13 +8,19 @@ module UserApi
       property :description
       property :link
       property :embed_code
-      property :state
+      property :slug
 
       property :talked_at
       property :updated_at
       property :created_at
 
       collection :speakers, decorator: UserApi::Serializers::Speaker
+    end
+
+    class TalkWithSpeakersEventAndTags < Talk
+      collection :speakers, decorator: UserApi::Serializers::Speaker
+      collection :tags, decorator: UserApi::Serializers::Tag
+      property :event, decorator: UserApi::Serializers::Event
     end
   end
 end

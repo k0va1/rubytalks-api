@@ -13,42 +13,16 @@ Hanami.application.routes do
   options '*match', to: cors_handler
 
   mount :admin_api, at: '/admin' do
-    resources :talks, only: %i[show update] do
-      collection do
-        get :approved
-        get :unpublished
-        get :declined
-      end
-
+    resources :talks, only: %i[show update index] do
       member do
         post :approve
         post :decline
       end
     end
 
-    resources :speakers, only: %i[update create show] do
-      collection do
-        get :approved
-        get :unpublished
-        get :declined
-      end
-    end
-
-    resources :events, only: %i[update create show] do
-      collection do
-        get :approved
-        get :unpublished
-        get :declined
-      end
-    end
-
-    resources :tags, only: [:create] do
-      collection do
-        get :approved
-        get :unpublished
-        get :declined
-      end
-    end
+    resources :speakers, only: %i[update create show index]
+    resources :events, only: %i[update create show index]
+    resources :tags, only: %i[create index]
     post '/login', to: 'sessions#create'
   end
 
@@ -56,5 +30,6 @@ Hanami.application.routes do
     resources :talks, only: %i[show create index] # only symbols allowed; no error with strings
     resources :speakers, only: %i[show index]
     resources :events, only: %i[show index]
+    resources :tags, only: %i[show index]
   end
 end

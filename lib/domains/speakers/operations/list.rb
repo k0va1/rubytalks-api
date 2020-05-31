@@ -6,11 +6,13 @@ module Domains
       class List
         include Operation
         include Import[
-          speaker_repo: 'repositories.speaker'
+          speaker_query: 'domains.speakers.queries.speaker'
         ]
 
-        def call(_params)
-          Success(speaker_repo.all)
+        def call(params)
+          speakers = speaker_query.all(params)
+
+          Success(speakers)
         end
       end
     end

@@ -21,8 +21,7 @@ RSpec.describe 'AdminApi: Sessions', type: :request do
       end
     end
 
-    # TODO: restore after errors mapper implementation
-    xcontext 'with invalid password' do
+    context 'with invalid credentials' do
       let(:params) do
         {
           username: user.username,
@@ -30,7 +29,7 @@ RSpec.describe 'AdminApi: Sessions', type: :request do
         }
       end
 
-      it 'returns 201' do
+      it 'returns 401' do
         post '/admin/login', headers: default_headers, body: params.to_json
 
         expect(response_status).to eq 401

@@ -5,24 +5,12 @@ module AdminApi
     class Speakers
       include Import[
         prepare_pagination: 'util.pagination.prepare',
-        approved_list: 'domains.speakers.operations.approved_list',
-        declined_list: 'domains.speakers.operations.declined_list',
-        unpublished_list: 'domains.speakers.operations.unpublished_list'
+        list: 'domains.speakers.operations.list'
       ]
 
-      def approved_speakers_list(input)
+      def speaker_list(input)
         input = prepare_pagination.call(input)
-        approved_list.call(input)
-      end
-
-      def declined_speakers_list(input)
-        input = prepare_pagination.call(input)
-        declined_list.call(input)
-      end
-
-      def unpublished_speakers_list(input)
-        input = prepare_pagination.call(input)
-        unpublished_list.call(input)
+        list.call(input)
       end
     end
   end

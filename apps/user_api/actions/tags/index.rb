@@ -1,22 +1,24 @@
 # frozen_string_literal: true
 
-module AdminApi
+module UserApi
   module Actions
     module Tags
-      class Declined < AdminApi::Action
+      class Index < UserApi::Action
         include Dry::Monads::Result::Mixin
         include AppImport[
-          tags: 'admin_api.services.tags'
+          tags: 'user_api.services.tags'
         ]
 
         params do
           optional(:page).filled(:integer)
           optional(:per_page).filled(:integer)
+          optional(:query).maybe(:string)
         end
 
         def handle(request, response)
-          input = validate_params(request.params)
-          result = tags.declined_tags_list(input)
+          result = validate_params(request.params).bind do |input|
+            tags.tag_list(input)
+          end
 
           respond_with_collection(response, result, Serializers::Tag)
         end

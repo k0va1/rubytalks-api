@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'dry/monads/result'
+
 module Util
   class Validator
     include Dry::Monads::Result::Mixin

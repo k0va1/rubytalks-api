@@ -98,21 +98,4 @@ RSpec.describe Repositories::Speaker do
       expect(result.id).to eq(approved_speaker_id)
     end
   end
-
-  describe '#all_approved' do
-    let!(:unapproved_speakers) do
-      5.times.map { Factory[:speaker] }
-    end
-
-    let!(:approved_speakers) do
-      6.times.map { Factory[:approved_speaker] }
-    end
-
-    it 'returns all approved speakers' do
-      result = subject.all_approved
-
-      expect(result.length).to eq(6)
-      expect(result.map(&:id)).to match_array(approved_speakers.map(&:id))
-    end
-  end
 end

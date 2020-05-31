@@ -21,4 +21,12 @@ RSpec.describe Parsers::Youtube::Parser do
     expect(parser.tags).not_to be_empty
     expect(parser.event).not_to be_empty
   end
+
+  context 'when event presents' do
+    it 'removes event name from talk title' do
+      subject
+
+      expect(parser.talk[:title]).to eq('isis agora lovecruft: big number small computer')
+    end
+  end
 end

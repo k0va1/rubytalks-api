@@ -24,7 +24,7 @@ module Parsers
       private
 
       def tags
-        item.snippet.description.scan(/#(\w+)/).flatten
+        item.snippet.description.scan(/\B\#([a-zA-Z0-9_]{2,}\b)/).flatten
       end
 
       attr_reader :item

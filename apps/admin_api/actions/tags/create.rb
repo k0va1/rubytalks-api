@@ -13,10 +13,10 @@ module AdminApi
           required(:title).filled(:str?)
         end
 
-        # TODO: handle failure
         def handle(request, response)
-          input = validate_params(request.params)
-          result = create.call(input)
+          result = validate_params(request.params).bind do |input|
+            create.call(input)
+          end
 
           respond_with(response, result, Serializers::Tag, status: 201)
         end

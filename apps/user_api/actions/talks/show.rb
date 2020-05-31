@@ -14,10 +14,11 @@ module UserApi
         end
 
         def handle(request, response)
-          input = validate_params(request.params)
-          result = find_approved.call(id: input[:id])
+          result = validate_params(request.params).bind do |input|
+            find_approved.call(id: input[:id])
+          end
 
-          respond_with(response, result, Serializers::Talk)
+          respond_with(response, result, Serializers::TalkWithSpeakersEventAndTags)
         end
       end
     end

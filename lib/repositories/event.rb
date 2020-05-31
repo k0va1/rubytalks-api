@@ -1,8 +1,11 @@
 # frozen_string_literal: true
 
+require 'util/pagination/apply'
+
 module Repositories
   class Event < ROM::Repository[:events]
     include Import.args[:rom]
+    include ::Util::Pagination::Apply
 
     commands :create, update: :by_pk
 
@@ -10,32 +13,8 @@ module Repositories
       events.to_a
     end
 
-    def all_approved(limit: nil, offset: nil)
-      combined = events.with_state(Types::States[:approved])
-
-      return combined.to_a if limit.nil? && offset.nil?
-
-      apply_pagination(combined, offset, limit).one!
-    end
-
-    def all_declined(limit: nil, offset: nil)
-      combined = events.with_state(Types::States[:declined])
-
-      return combined.to_a if limit.nil? && offset.nil?
-
-      apply_pagination(combined, offset, limit).one!
-    end
-
-    def all_unpublished(limit: nil, offset: nil)
-      combined = events.with_state(Types::States[:unpublished])
-
-      return combined.to_a if limit.nil? && offset.nil?
-
-      apply_pagination(combined, offset, limit).one!
-    end
-
     def find_or_create(event_form)
-      event = find_by_name(name: event_form[:name])
+      event = root.by_pk(event_form[:id]).one if event_form[:id]
       event || events.changeset(Changesets::Event::Create, event_form).commit
     end
 
@@ -48,6 +27,7 @@ module Repositories
     def find_with_talks(id:)
       events
         .combine(:talks)
+        .node(:talks) { |talks| talks.combine(:speakers).where { state =~ Types::States[:approved] } }
         .with_state('approved')
         .by_pk(id)
         .one!
@@ -62,15 +42,6 @@ module Repositories
 
     def order_by_ended_at
       root.order(:ended_at)
-    end
-
-    private
-
-    def apply_pagination(relation, offset, limit)
-      with_opts = relation.limit(limit)
-      with_opts = with_opts.offset(offset) if offset.positive?
-
-      with_opts >> Util::Pagination::Mapper.new(relation)
     end
   end
 end

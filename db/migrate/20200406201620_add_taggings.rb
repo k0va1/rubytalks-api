@@ -7,6 +7,8 @@ ROM::SQL.migration do
 
       foreign_key :tag_id, :tags, null: false
       foreign_key :talk_id, :talks, null: false
+
+      unique(%i[tag_id talk_id])
     end
   end
 end

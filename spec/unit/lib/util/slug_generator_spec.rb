@@ -51,5 +51,13 @@ RSpec.describe Util::SlugGenerator do
     it 'returns downcased string separated by dashes' do
       is_expected.to eq('hello-world-again')
     end
+
+    context 'with empty string in array' do
+      let(:args) { %w[hElLo agAin].insert(1, '') }
+
+      it 'returns downcased string separated by dashes' do
+        is_expected.to eq('hello-again')
+      end
+    end
   end
 end

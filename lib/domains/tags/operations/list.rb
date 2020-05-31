@@ -1,18 +1,18 @@
 # frozen_string_literal: true
 
 module Domains
-  module Talks
+  module Tags
     module Operations
-      class ApprovedList
+      class List
         include Operation
         include Import[
-          talk_repo: 'repositories.talk'
+          tag_query: 'domains.tags.queries.tag'
         ]
 
         def call(input)
-          talks = talk_repo.all_approved(limit: input[:limit], offset: input[:offset])
+          tags = tag_query.all(input)
 
-          Success(talks)
+          Success(tags)
         end
       end
     end

@@ -11,19 +11,22 @@ module Domains
           speaker_repo: 'repositories.speaker',
           event_repo: 'repositories.event',
           speaking_repo: 'repositories.speaking',
+          tag_repo: 'repositories.tag',
+          tagging_repo: 'repositories.tagging',
           slug_generator: 'util.slug_generator'
         ]
 
         def call(talk_form) # rubocop:disable Metrics/AbcSize
-          talk_form = talk_form.transform_keys(&:to_sym)
-          oembed    = yield generate_oembed(talk_form[:link])
+          oembed = yield generate_oembed(talk_form[:link])
 
           talk_repo.transaction do
             speakers = yield find_or_create_speakers(talk_form[:speakers])
             event    = yield find_or_create_event(talk_form[:event])
             talk     = yield event ? create_talk(talk_form, oembed, event.id) : create_talk(talk_form, oembed)
+            tags     = yield find_or_create_tags(talk_form[:tags])
             yield create_speakings(talk.id, speakers)
-            Success(talk)
+            yield create_taggings(talk.id, tags)
+            Success(:created)
           end
         end
 
@@ -83,14 +86,35 @@ module Domains
         end
 
         def find_or_create_event(event_form)
-          return Success(nil) unless event_form
-
-          event_form = event_form.transform_keys(&:to_sym).merge(
-            state: 'unpublished'
-          )
+          return Success(nil) if event_form.empty? || event_form.nil?
 
           event = event_repo.find_or_create(event_form)
           event ? Success(event) : Failure('could not create event')
+        end
+
+        def find_or_create_tags(tag_forms)
+          Dry::Monads::List[*tag_forms.map(&method(:find_or_create_tag))].typed(Dry::Monads::Result).traverse
+        end
+
+        def find_or_create_tag(tag_form)
+          tag = tag_repo.find_or_create_by_id(tag_form)
+          tag ? Success(tag) : Failure('could not create tag')
+        end
+
+        def create_tagging(talk_id, tag_id)
+          tagging = tagging_repo.create(talk_id: talk_id, tag_id: tag_id)
+
+          if tagging
+            Success(tagging)
+          else
+            Failure('could not create tagging')
+          end
+        end
+
+        def create_taggings(talk_id, tags)
+          Dry::Monads::List[*tags.map { |tag| create_tagging(talk_id, tag.id) }]
+            .typed(Dry::Monads::Result)
+            .traverse
         end
       end
     end

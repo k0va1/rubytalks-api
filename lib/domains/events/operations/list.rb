@@ -6,11 +6,13 @@ module Domains
       class List
         include Operation
         include Import[
-          event_repo: 'repositories.event'
+          event_query: 'domains.events.queries.event'
         ]
 
-        def call(_params)
-          Success(event_repo.all)
+        def call(params)
+          events = event_query.all(params)
+
+          Success(events)
         end
       end
     end

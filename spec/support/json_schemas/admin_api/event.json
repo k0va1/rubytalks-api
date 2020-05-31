@@ -1,5 +1,5 @@
 {
-  "id": "file:/admin_api/speaker.json",
+  "id": "file:/admin_api/event.json",
   "type": "object",
   "required": [
     "id",

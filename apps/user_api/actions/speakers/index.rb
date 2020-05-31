@@ -12,11 +12,13 @@ module UserApi
         params do
           optional(:page).filled(:integer)
           optional(:per_page).filled(:integer)
+          optional(:query).maybe(:string)
         end
 
         def handle(request, response)
-          input = validate_params(request.params)
-          result = speakers.approved_speakers_list(input)
+          result = validate_params(request.params).bind do |input|
+            speakers.speaker_list(input)
+          end
 
           respond_with_collection(response, result, Serializers::Speaker)
         end

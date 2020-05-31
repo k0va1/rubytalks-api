@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-RSpec.describe AdminApi::Actions::Talks::Unpublished do
+RSpec.describe AdminApi::Actions::Talks::Index do
   subject { action.call(params) }
 
   let(:params) { {} }
@@ -24,7 +24,7 @@ RSpec.describe AdminApi::Actions::Talks::Unpublished do
     end
 
     before do
-      allow(service).to receive(:unpublished).and_return(Success(result))
+      allow(service).to receive(:talk_list).and_return(Success(result))
     end
 
     let(:talk_repo) { Repositories::Talk.new(Hanami::Container[:rom]) }
