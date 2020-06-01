@@ -24,8 +24,8 @@ module Domains
             Try do
               process_playlists
               process_all_videos
-              Success('Import successfully passed')
-            end
+              Success('Youtube import successfully passed')
+            end.to_result
           end
 
           private
