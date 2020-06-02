@@ -19,7 +19,9 @@ module Parsers
           title: title,
           description: description,
           talked_at: talked_at,
-          link: link
+          link: link,
+          source: source,
+          source_id: source_id
         }
       end
 
@@ -41,15 +43,25 @@ module Parsers
 
       def link
         html_link = talk_page.css('iframe').first&.attr(:src)
+        @hash = html_link.scan(HASH_REGEX).flatten.first
 
-        hash = html_link.scan(HASH_REGEX).flatten.first
         if youtube_link?(html_link)
-          "https://www.youtube.com/watch?v=#{hash}"
+          @source = 'youtube'
+          "https://www.youtube.com/watch?v=#{@hash}"
         elsif vimeo_link?(html_link)
-          "https://vimeo.com/#{hash}"
+          @source = 'vimeo'
+          "https://vimeo.com/#{@hash}"
         else
           raise UndefinedLinkProviderError, "Unprocessable link: #{html_link}"
         end
+      end
+
+      def source
+        @source if defined?(@source)
+      end
+
+      def source_id
+        @hash if defined?(@hash)
       end
 
       private

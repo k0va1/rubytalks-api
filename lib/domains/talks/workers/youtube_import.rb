@@ -22,6 +22,7 @@ module Domains
             logger.info('Talks have successfully imported')
           when Failure
             logger.error('Could not import talks from youtube.')
+            logger.error(result.failure)
           end
         end
       end

@@ -20,45 +20,47 @@ module Domains
           CONFREAKS_URL = 'https://confreaks.tv'
           BUZZWORDS = %w[ruby rails goruco .rb euruko].freeze
 
-          # TODO: return Success or Failure
           def call # rubocop:disable Metrics/AbcSize,Metrics/MethodLength
-            (1..total_pages).each do |page| # rubocop: disable Metrics/BlockLength
-              html_page = get_parsed_page("#{CONFREAKS_URL}/?page=#{page}")
-              ruby_events = select_ruby_events(html_page)
+            Try do # rubocop: disable Metrics/BlockLength
+              (1..total_pages).each do |page| # rubocop: disable Metrics/BlockLength
+                html_page = get_parsed_page("#{CONFREAKS_URL}/?page=#{page}")
+                ruby_events = select_ruby_events(html_page)
 
-              ruby_events.each do |ruby_event| # rubocop: disable Metrics/BlockLength
-                event_url = "#{CONFREAKS_URL}#{ruby_event.css('.event-img').css('/a').first.attr(:href)}"
-                event_page = get_parsed_page(event_url)
+                ruby_events.each do |ruby_event| # rubocop: disable Metrics/BlockLength
+                  event_url = "#{CONFREAKS_URL}#{ruby_event.css('.event-img').css('/a').first.attr(:href)}"
+                  event_page = get_parsed_page(event_url)
 
-                event_hash = Parsers::Confreaks::EventParser.new(ruby_event).call
-                event = event_repo.find_or_create(event_hash)
+                  event_hash = Parsers::Confreaks::EventParser.new(ruby_event).call
+                  event = event_repo.find_or_create(event_hash)
 
-                event_page.css('.video').each do |talk_item|
-                  talk_url = talk_item.css('.video-image').css('/a').first&.attr(:href)
-                  talk_page = get_parsed_page("#{CONFREAKS_URL}#{talk_url}")
+                  event_page.css('.video').each do |talk_item|
+                    talk_url = talk_item.css('.video-image').css('/a').first&.attr(:href)
+                    talk_page = get_parsed_page("#{CONFREAKS_URL}#{talk_url}")
 
-                  speaker_list = talk_page.css('.video-presenters').css('/a').map do |speaker_link|
-                    Parsers::Confreaks::SpeakerParser.new(speaker_link).call
-                  end
-                  talk_hash = Parsers::Confreaks::TalkParser.new(talk_item, talk_page).call
-                  tags_list = talk_page.css('.video-bottom-info-middle').css('.tag').map do |tag|
-                    Parsers::Confreaks::TagParser.new(tag).call
-                  end
-
-                  talk_repo.transaction do
-                    talk = talk_repo.find_or_create(talk_hash.merge(event_id: event&.id))
-                    speaker_list.each do |speaker_hash|
-                      speaker = speaker_repo.find_or_create(speaker_hash)
-                      speaking_repo.find_or_create(speaker_id: speaker.id, talk_id: talk.id)
+                    speaker_list = talk_page.css('.video-presenters').css('/a').map do |speaker_link|
+                      Parsers::Confreaks::SpeakerParser.new(speaker_link).call
                     end
-                    tags_list.each do |tag_hash|
-                      tag = tag_repo.find_or_create(tag_hash)
-                      tagging_repo.find_or_create(tag_id: tag.id, talk_id: talk.id)
+                    talk_hash = Parsers::Confreaks::TalkParser.new(talk_item, talk_page).call
+                    tags_list = talk_page.css('.video-bottom-info-middle').css('.tag').map do |tag|
+                      Parsers::Confreaks::TagParser.new(tag).call
+                    end
+
+                    talk_repo.transaction do
+                      talk = talk_repo.find_or_create(talk_hash.merge(event_id: event&.id))
+                      speaker_list.each do |speaker_hash|
+                        speaker = speaker_repo.find_or_create(speaker_hash)
+                        speaking_repo.find_or_create(speaker_id: speaker.id, talk_id: talk.id)
+                      end
+                      tags_list.each do |tag_hash|
+                        tag = tag_repo.find_or_create(tag_hash)
+                        tagging_repo.find_or_create(tag_id: tag.id, talk_id: talk.id)
+                      end
                     end
                   end
                 end
               end
-            end
+              Success('Confreaks import successfully passed')
+            end.to_result
           end
 
           private

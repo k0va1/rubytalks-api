@@ -18,13 +18,29 @@ module Repositories
     end
 
     def find_or_create(talk_form)
-      talk = find_by_title(title: talk_form[:title])
+      talk = find_by_title(
+        talk_form[:title], talk_form[:event_id]
+      ) || find_by_slug(talk_form[:slug]) || find_by_source_id(talk_form[:source_id])
       talk || talks.changeset(Changesets::Talk::Create, talk_form).commit
     end
 
-    def find_by_title(title:)
+    def find_by_title(title, event_id)
       root
-        .where(title: title)
+        .where(title: title, event_id: event_id)
+        .one
+    end
+
+    def find_by_slug(slug)
+      root
+        .where(slug: slug)
+        .one
+    end
+
+    def find_by_source_id(source_id)
+      return nil if source_id.nil?
+
+      root
+        .where(source_id: source_id)
         .one
     end
 
