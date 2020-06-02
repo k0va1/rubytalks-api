@@ -28,7 +28,7 @@ module Repositories
         .where(first_name: first_name, last_name: last_name)
         .one
     end
-    
+
     def find_by_slug(slug)
       root
         .where(slug: slug)
