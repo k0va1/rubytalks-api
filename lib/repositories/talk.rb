@@ -37,6 +37,8 @@ module Repositories
     end
 
     def find_by_source_id(source_id)
+      return nil if source_id.nil?
+
       root
         .where(source_id: source_id)
         .one
