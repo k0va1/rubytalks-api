@@ -3,17 +3,23 @@
 module Parsers
   module Confreaks
     class EventParser
+      include Import[
+        slug_generator: 'util.slug_generator'
+      ]
+
       attr_reader :event_page
 
-      def initialize(event_page)
+      def initialize(event_page, *args)
         @event_page = event_page
+        super(*args)
       end
 
       def call
         {
           name: name,
           started_at: started_at,
-          ended_at: ended_at
+          ended_at: ended_at,
+          slug: slug
         }
       end
 
@@ -35,6 +41,10 @@ module Parsers
         else
           started_at
         end
+      end
+
+      def slug
+        slug_generator.call(name)
       end
 
       private
