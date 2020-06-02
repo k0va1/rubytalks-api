@@ -8,7 +8,10 @@ module Repositories
     commands :create, update: :by_pk
 
     def find_or_create(speaker_form)
-      speaker = find_by_name(first_name: speaker_form[:first_name], last_name: speaker_form[:last_name])
+      speaker = find_by_name(
+        first_name: speaker_form[:first_name],
+        last_name: speaker_form[:last_name]
+      ) || find_by_slug(speaker_form[:slug])
       speaker || speakers.changeset(Changesets::Speaker::Create, **speaker_form).commit
     end
 
@@ -23,6 +26,12 @@ module Repositories
     def find_by_name(first_name: nil, last_name: nil)
       root
         .where(first_name: first_name, last_name: last_name)
+        .one
+    end
+    
+    def find_by_slug(slug)
+      root
+        .where(slug: slug)
         .one
     end
 
