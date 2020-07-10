@@ -25,6 +25,43 @@ steps:
       - HANAMI_ENV=test bundle exec rake db:migrate
       - bundle exec rspec
 
+  - name: build_and_push
+    image: plugins/docker
+    settings:
+      username:
+        from_secret: DOCKER_LOGIN
+      password:
+        from_secret: DOCKER_PASS
+      repo: rubytalks/api
+      tags: ${DRONE_COMMIT}
+    when:
+      status: success
+      branch: master
+      event: push
+
+  - name: deploy
+    image: appleboy/drone-ssh
+    settings:
+      host: rubytalks.dev
+      port: 22
+      script:
+        - docker service update --image rubytalks/api:${DRONE_COMMIT} backend_api
+        - docker service update --image rubytalks/api:${DRONE_COMMIT} backend_sidekiq
+        - docker service ls
+        - docker ps
+      debug: true
+    environment:
+      USERNAME:
+        from_secret: USERNAME
+      SSH_KEY:
+        from_secret: SSH_KEY
+      PASSPHRASE:
+        from_secret: PASSWORD
+    when:
+      status: success
+      branch: master
+      event: push
+
   - name: notify
     image: appleboy/drone-telegram
     settings:
