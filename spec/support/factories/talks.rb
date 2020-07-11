@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 Factory.define(:talk) do |f|
-  f.title { Faker::Book.title }
+  f.sequence(:title) { |i| "Faker::Book.title#{i}" }
   f.description { Faker::Movies::Lebowski.quote }
   f.embed_code { '<iframe width="100%" height="300px" src="https://www.youtube.com/embed/0nc3SXoObs8" frameborder="0" allowfullscreen></iframe>' } # rubocop:disable Metrics/LineLength
   f.link { 'https://www.youtube.com/watch?v=t99KH0TR-J4' }
