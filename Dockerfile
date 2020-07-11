@@ -10,6 +10,7 @@ WORKDIR /app
 
 ADD Gemfile /app/Gemfile
 ADD Gemfile.lock /app/Gemfile.lock
+RUN gem install bundler:2.1.2
 RUN bundle install --without development test -j 5
 
 ADD . /app
