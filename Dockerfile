@@ -18,4 +18,6 @@ ADD . /app
 ENV LANG=en_US.UTF-8
 ENV HANAMI_ENV=production
 
+EXPOSE 2300
+
 CMD /app/startup.sh
