@@ -2,7 +2,7 @@
 
 Hanami::Container.boot(:rom) do |app|
   init do
-    require 'dotenv'
+    require 'dotenv' if defined?(Dotenv)
   end
 
   start do

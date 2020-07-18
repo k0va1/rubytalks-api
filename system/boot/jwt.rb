@@ -2,7 +2,7 @@
 
 Hanami::Container.boot(:jwt) do |_container|
   init do
-    require 'dotenv'
+    require 'dotenv' if defined?(Dotenv)
     require 'jwt'
 
     class Jwt

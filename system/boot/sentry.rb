@@ -2,7 +2,7 @@
 
 Hanami::Container.boot(:sentry) do |_container|
   init do
-    require 'dotenv'
+    require 'dotenv' if defined?(Dotenv)
   end
 
   start do

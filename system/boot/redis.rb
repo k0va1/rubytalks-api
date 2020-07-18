@@ -2,7 +2,7 @@
 
 Hanami::Container.boot(:redis) do |_container|
   init do
-    require 'dotenv'
+    require 'dotenv' if defined?(Dotenv)
 
     redis = ConnectionPool.new(size: 10, timeout: 3) do
       Redis.new(url: ENV.fetch('REDIS_URL'))
