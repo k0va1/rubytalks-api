@@ -42,7 +42,7 @@ RSpec.describe 'AdminApi: Speakers', type: :request do
         end
 
         it 'returns 200' do
-          post "/admin/speakers/#{speaker.id}/approve",  headers: headers
+          post "/admin/speakers/#{speaker.id}/approve", headers: headers
 
           expect(response_status).to eq 200
         end
