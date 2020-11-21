@@ -32,6 +32,24 @@ RSpec.describe 'AdminApi: Speakers', type: :request do
     end
   end
 
+  describe 'POST /admin_api/speakers/:id/approve' do
+    context 'with authentication' do
+      let(:headers) { default_headers.merge(auth_header) }
+
+      context 'valid params' do
+        let(:speaker) do
+          Hanami::Container['repositories.speaker'].create(Factory.structs[:speaker])
+        end
+
+        it 'returns 200' do
+          post "/admin/speakers/#{speaker.id}/approve",  headers: headers
+
+          expect(response_status).to eq 200
+        end
+      end
+    end
+  end
+
   describe 'GET /admin_api/speakers' do
     context 'with authentication' do
       let!(:speaker1) { Factory[:speaker, state: 'unpublished'] }

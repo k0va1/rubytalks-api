@@ -20,7 +20,11 @@ Hanami.application.routes do
       end
     end
 
-    resources :speakers, only: %i[update create show index]
+    resources :speakers, only: %i[update create show index] do
+      member do
+        post :approve
+      end
+    end
     resources :events, only: %i[update create show index]
     resources :tags, only: %i[create index]
     post '/login', to: 'sessions#create'
