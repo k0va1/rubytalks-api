@@ -45,7 +45,7 @@ steps:
       host: rubytalks.dev
       port: 22
       script:
-        - docker service update --image rubytalks/api:${DRONE_COMMIT} backend_api
+        - docker service update --image rubytalks/api:${DRONE_COMMIT} backend_rubytalks
         - docker service update --image rubytalks/api:${DRONE_COMMIT} backend_sidekiq
         - docker service ls
         - docker ps
